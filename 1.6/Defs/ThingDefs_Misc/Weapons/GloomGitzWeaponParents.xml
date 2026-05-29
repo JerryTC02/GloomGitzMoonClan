@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  
+  <ThingDef Name="GloomGitzBaseHumanMakeableRanged" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Medieval</techLevel>
+    <weaponTags Inherit="False">
+    </weaponTags>
+    <tradeTags Inherit="False">
+      <li>GloomGitzRanged</li>
+    </tradeTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <relicChance>1</relicChance>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+		<li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <effectWorking>Smelt</effectWorking>
+      <soundWorking>Recipe_MakeBow</soundWorking>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="GloomGitzBaseMeleeWeapon_Sharp_Quality" Abstract="True" ParentName="BaseMeleeWeapon_Sharp">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+	<weaponTags Inherit="False">
+    </weaponTags>
+	<tradeTags Inherit="False">
+      <li>GloomGitzMelee</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef Name="GloomGitzBaseMeleeWeapon_Sharp" Abstract="True" ParentName="BaseMeleeWeapon_Sharp">
+    <comps>
+    </comps>
+	<weaponTags Inherit="False">
+    </weaponTags>
+	<tradeTags Inherit="False">
+      <li>GloomGitzMelee</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef Name="GloomGitzBaseMeleeWeapon_Blunt_Quality" Abstract="True" ParentName="BaseMeleeWeapon_Sharp">
+    <weaponClasses Inherit="False">
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+	<weaponTags Inherit="False">
+    </weaponTags>
+    <tradeTags Inherit="False">
+      <li>GloomGitzMelee</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

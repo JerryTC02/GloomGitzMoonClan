@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <RecipeDef Name="AOSGitzCookMealBulkBase" ParentName="CookMealBase" Abstract="True">
+    <workAmount>3000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AOSGitzCookMealBulkBase">
+    <defName>AOSGitzCookMealBulk_Meat</defName>
+    <label>cook crude meat stew</label>
+    <description>Throw meat scraps, fat, and possibly some fur in a pot to create a nourishing but somewhat crude meat stew. The benefit of Grot cooking is that it always provides many portions.</description>
+    <jobString>Cooking 6 bowls of stew</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <disallowedCategories>
+        <li>PlantFoodRaw</li>
+        <li>AnimalProductRaw</li>
+      </disallowedCategories>
+    </fixedIngredientFilter>
+    <products>
+      <AOSGitz_Meal_Meat>6</AOSGitz_Meal_Meat>
+    </products>
+    <displayPriority>100001</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AOSGitzCookMealBulkBase">
+    <defName>AOSGitzCookMealBulk_Veg</defName>
+    <label>cook crude mushroom stew</label>
+    <description>Throw fungus and some mold off the floor in a pot to create a nourishing but awful vegeterian stew. The benefit of Grot cooking is that it always provides many portions.</description>
+    <jobString>Cooking 6 bowls of stew.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawFungus</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawFungus</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AOSGitz_Meal_Veg>6</AOSGitz_Meal_Veg>
+    </products>
+    <displayPriority>100001</displayPriority>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>AOSGitz_Make_Grog</defName>
+    <label>make fungal grog</label>
+    <description>Make fungal grog from raw fungus.</description>
+    <jobString>Making fungal grog.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>7250</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawFungus</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawFungus</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AOSGitz_Grog>5</AOSGitz_Grog>
+    </products>
+  </RecipeDef>
+
+</Defs>

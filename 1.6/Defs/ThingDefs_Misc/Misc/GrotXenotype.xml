@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <GeneCategoryDef>
+    <defName>AOSGitz_Grots</defName>
+    <label>Grots</label>
+    <displayPriorityInXenotype>1006996</displayPriorityInXenotype>
+  </GeneCategoryDef>
+  
+  <GeneDef Name="AOSGitzGenes" Abstract="True">
+    <displayCategory>AOSGitz_Grots</displayCategory>
+  </GeneDef>
+
+  <GeneDef ParentName="AOSGitzGenes">
+    <defName>AOSGitz_MainGene</defName>
+    <label>Grot Biology</label>
+    <description>Grots are quite pathetic creatures, especially when young they tend to be easy to bruise.</description>
+    <iconPath>UI/Icons/AOSGitz_Gene_GrotHead</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+	<forcedTraits>
+      <li>
+        <def>Bloodlust</def>
+      </li>
+    </forcedTraits>
+	<painFactor>1.25</painFactor>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>5</biostatCpx>
+	<missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+	<exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+	<statFactors>
+	  <SM_BodySizeMultiplier>0.60</SM_BodySizeMultiplier>
+    </statFactors>
+	<damageFactors>
+      <Flame>1.10</Flame>
+    </damageFactors>
+	<statOffsets>
+	  <MoveSpeed>0.1</MoveSpeed>
+    </statOffsets>
+    <statFactors>
+	  <Fertility>0</Fertility>
+    </statFactors>
+    <skinIsHairColor>false</skinIsHairColor>
+		<renderNodeProperties Inherit="False">
+			<li Class="BigAndSmall.PawnComplexRenderingProps">
+				<useSkinShader>true</useSkinShader>
+			</li>
+		</renderNodeProperties>
+	<modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+	        <headDrawData>
+			     <dataSouth>
+                    <offset>(0.0, 0., -0.05)</offset>
+                </dataSouth>
+                <dataWest>
+                    <offset>(-0.05, 0.0, -0.05)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.05, 0.0, -0.05)</offset>
+                </dataEast>
+                <dataNorth>
+                    <offset>(-0.0, 0.0, -0.05)</offset>
+                </dataNorth>
+			</headDrawData>
+	  		<headPaths>
+				<Female>Things/Pawn/Humanlike/Heads/Male/goblinhead</Female>
+				<Male>Things/Pawn/Humanlike/Heads/Male/goblinhead</Male>
+			</headPaths>
+			<headMaterial>
+				<shader>CutoutComplex</shader>
+				<overrideDesiccated>true</overrideDesiccated>
+			</headMaterial>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  
+  <GeneDef ParentName="AOSGitzGenes">
+    <defName>AOSGitz_BossGene</defName>
+    <label>Grot Boss Biology</label>
+    <description>Bosses have survived long enough to be abit less pathetic then the average Grot.</description>
+    <iconPath>UI/Icons/AOSGitz_Gene_GrotHead</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+	<forcedTraits>
+      <li>
+        <def>Bloodlust</def>
+      </li>
+    </forcedTraits>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>5</biostatCpx>
+	<missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+	<exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+	<statFactors>
+	  <SM_BodySizeMultiplier>0.70</SM_BodySizeMultiplier>
+    </statFactors>
+	<damageFactors>
+      <Flame>1.05</Flame>
+    </damageFactors>
+	<statOffsets>
+	  <MoveSpeed>0.1</MoveSpeed>
+    </statOffsets>
+    <statFactors>
+	  <Fertility>0</Fertility>
+    </statFactors>
+    <skinIsHairColor>false</skinIsHairColor>
+		<renderNodeProperties Inherit="False">
+			<li Class="BigAndSmall.PawnComplexRenderingProps">
+				<useSkinShader>true</useSkinShader>
+			</li>
+		</renderNodeProperties>
+	<modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+	  	    <headDrawData>
+			     <dataSouth>
+                    <offset>(0.0, 0., -0.05)</offset>
+                </dataSouth>
+                <dataWest>
+                    <offset>(-0.05, 0.0, -0.05)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.05, 0.0, -0.05)</offset>
+                </dataEast>
+                <dataNorth>
+                    <offset>(-0.0, 0.0, -0.05)</offset>
+                </dataNorth>
+			</headDrawData>
+	  		<headPaths>
+				<Female>Things/Pawn/Humanlike/Heads/Male/goblinhead</Female>
+				<Male>Things/Pawn/Humanlike/Heads/Male/goblinhead</Male>
+			</headPaths>
+			<headMaterial>
+				<shader>CutoutComplex</shader>
+				<overrideDesiccated>true</overrideDesiccated>
+			</headMaterial>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  
+  <GeneDef ParentName="AOSGitzGenes">
+    <defName>AOSGitz_LoonBossGene</defName>
+    <label>Loonboss Biology</label>
+    <description>Some of the oldest and most cunning of their race, Loonbosses survive through a mix of trickery and savagery.</description>
+    <iconPath>UI/Icons/AOSGitz_Gene_GrotHead</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+	<forcedTraits>
+      <li>
+        <def>Bloodlust</def>
+      </li>
+    </forcedTraits>
+    <painFactor>0.90</painFactor>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>5</biostatCpx>
+	<missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+	<exclusionTags>
+      <li>Fur</li>
+    </exclusionTags>
+	<statFactors>
+	  <SM_BodySizeMultiplier>0.80</SM_BodySizeMultiplier>
+    </statFactors>
+	<damageFactors>
+      <Flame>1.05</Flame>
+    </damageFactors>
+	<statOffsets>
+	  <MoveSpeed>0.1</MoveSpeed>
+    </statOffsets>
+    <statFactors>
+	  <Fertility>0</Fertility>
+    </statFactors>
+    <skinIsHairColor>false</skinIsHairColor>
+		<renderNodeProperties Inherit="False">
+			<li Class="BigAndSmall.PawnComplexRenderingProps">
+				<useSkinShader>true</useSkinShader>
+			</li>
+		</renderNodeProperties>
+	<modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+	  	    <headDrawData>
+			     <dataSouth>
+                    <offset>(0.0, 0., -0.05)</offset>
+                </dataSouth>
+                <dataWest>
+                    <offset>(-0.05, 0.0, -0.05)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.05, 0.0, -0.05)</offset>
+                </dataEast>
+                <dataNorth>
+                    <offset>(-0.0, 0.0, -0.05)</offset>
+                </dataNorth>
+			</headDrawData>
+	  		<headPaths>
+				<Female>Things/Pawn/Humanlike/Heads/Male/goblinhead</Female>
+				<Male>Things/Pawn/Humanlike/Heads/Male/goblinhead</Male>
+			</headPaths>
+			<headMaterial>
+				<shader>CutoutComplex</shader>
+				<overrideDesiccated>true</overrideDesiccated>
+			</headMaterial>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_JerryCustomGrotGreen</defName>
+    <label>greenskin</label>
+    <labelShortAdj>greenskin</labelShortAdj>
+    <description>Carriers of this gene have varying shades of green skin</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(122, 164, 132)</skinColorOverride>
+    <displayOrderInCategory>99</displayOrderInCategory>
+  </GeneDef>
+ 
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_ZarbagGreen</defName>
+    <label>greenskin</label>
+    <labelShortAdj>greenskin</labelShortAdj>
+    <description>Carriers of this gene have varying shades of green skin</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(147, 155, 116)</skinColorOverride>
+    <displayOrderInCategory>99</displayOrderInCategory>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_BoggleEyeGreen</defName>
+    <label>greenskin</label>
+    <labelShortAdj>greenskin</labelShortAdj>
+    <description>Carriers of this gene have varying shades of green skin</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(171, 175, 138)</skinColorOverride>
+    <displayOrderInCategory>99</displayOrderInCategory>
+  </GeneDef>
+  
+  <GeneDef ParentName="AOSGitzGenes">
+    <defName>AOSGitz_FungalMeat</defName>
+    <label>Fungoid Biology</label>
+    <description>Greenskins, whether they be Orruk, Grot, or Hobgrot are all infact closer related to mushrooms and fungi then they are most other animals.</description>
+    <iconPath>UI/Icons/Gene_FungalGrowth</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>5</biostatCpx>
+	<exclusionTags>
+    </exclusionTags>
+	<modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <meatOverride>Meat_AOSGitz_Grot</meatOverride>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  
+  <ThingDef>
+    <defName>Meat_AOSGitz_Grot</defName>
+    <label>greenskin flesh</label>
+    <description>Tasting closer to a mushroom then human flesh, most races will find the meat of Greenskins acceptable albeit often still do not enjoy the process of butchering the owner to obtain it.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <selectable>true</selectable>
+    <category>Item</category>
+    <drawerType>MapMeshOnly</drawerType>
+    <tickerType>Rare</tickerType>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Item</altitudeLayer>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stackLimit>75</stackLimit>
+    <alwaysHaulable>true</alwaysHaulable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tradeability>Sellable</tradeability>
+    <pathCost>14</pathCost>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Beauty>-3</Beauty>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Mass>0.03</Mass>
+      <Flammability>0.65</Flammability>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.05</FoodPoisonChanceFixedHuman>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Resource/Gitz/GrotFlesh</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+    <ingredient>
+    </ingredient>
+    <ingestible>
+      <foodType>Meat</foodType>
+      <preferability>RawBad</preferability>
+      <ingestEffect>EatMeat</ingestEffect>
+      <ingestSound>RawMeat_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>5</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li>
+        <compClass>CompHarbingerTreeConsumable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <XenotypeDef>
+    <defName>AOSGitz_Grot</defName>
+    <label>Grot</label>
+    <description>Small and runty cousins to the Orruks, Grots are sadistic and cowardly creatures who fear the light of the sun. Grots infest every region that the other known races either cannot or will not inhabit, and begin to spread their spores around it to ensure they will forever hold claim over the area.</description>
+    <descriptionShort>Small and runty cousins to the Orruks, Grots are sadistic and cowardly creatures who fear the light of the sun.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Xenotype_Grot</iconPath>
+    <inheritable>true</inheritable>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+	  <li>AOSGitz_MainGene</li>
+	  <li>AOSGitz_FungalMeat</li>
+	  <li>Ageless</li>
+	  <li>DarkVision</li>
+	  <li>CaveDweller</li>
+	  <li>UVSensitivity_Mild</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>Hair_BaldOnly</li>
+	  <li>WoundHealing_Fast</li>
+	  <li>MinTemp_SmallDecrease</li>
+	  <li>MaxTemp_SmallIncrease</li>
+	  <li>Aggression_Aggressive</li>
+	  <li>StrongStomach</li>
+	  <li>Body_Standard</li>
+	  <li>Mood_Pessimist</li>
+      <li>AptitudePoor_Artistic</li>
+	  <li>AptitudePoor_Cooking</li>
+	  <li>AptitudePoor_Social</li>
+	  <li>Beauty_Ugly</li>
+	  <li MayRequire="RedMattis.BetterPrerequisites">Body_MaleOnly</li>
+	  <li>Skin_JerryCustomGrotGreen</li>
+	  <li>Skin_ZarbagGreen</li>
+	  <li>Skin_BoggleEyeGreen</li>
+    </genes>
+  </XenotypeDef>
+  
+  <XenotypeDef>
+    <defName>AOSGitz_BossGrot</defName>
+    <label>Boss Grot</label>
+    <description>Small and runty cousins to the Orruks, Grots are sadistic and cowardly creatures who fear the light of the sun. Grots infest every region that the other known races either cannot or will not inhabit, and begin to spread their spores around it to ensure they will forever hold claim over the area.</description>
+    <descriptionShort>Small and runty cousins to the Orruks, Grots are sadistic and cowardly creatures who fear the light of the sun.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Xenotype_GrotChief</iconPath>
+    <inheritable>true</inheritable>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+	  <li>AOSGitz_BossGene</li>
+	  <li>AOSGitz_FungalMeat</li>
+	  <li>Ageless</li>
+	  <li>DarkVision</li>
+	  <li>CaveDweller</li>
+	  <li>UVSensitivity_Mild</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>Hair_BaldOnly</li>
+	  <li>WoundHealing_Fast</li>
+	  <li>MinTemp_SmallDecrease</li>
+	  <li>MaxTemp_SmallIncrease</li>
+	  <li>Aggression_Aggressive</li>
+	  <li>StrongStomach</li>
+	  <li>Body_Standard</li>
+	  <li>Mood_Pessimist</li>
+      <li>AptitudePoor_Artistic</li>
+	  <li>AptitudePoor_Cooking</li>
+	  <li>Beauty_Ugly</li>
+	  <li MayRequire="RedMattis.BetterPrerequisites">Body_MaleOnly</li>
+	  <li>Skin_JerryCustomGrotGreen</li>
+	  <li>Skin_ZarbagGreen</li>
+	  <li>Skin_BoggleEyeGreen</li>
+    </genes>
+  </XenotypeDef>
+  
+  <XenotypeDef>
+    <defName>AOSGitz_LoonBossGrot</defName>
+    <label>Loonboss</label>
+    <description>Small and runty cousins to the Orruks, Grots are sadistic and cowardly creatures who fear the light of the sun. Grots infest every region that the other known races either cannot or will not inhabit, and begin to spread their spores around it to ensure they will forever hold claim over the area.</description>
+    <descriptionShort>Small and runty cousins to the Orruks, Grots are sadistic and cowardly creatures who fear the light of the sun.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Xenotype_LoonBoss</iconPath>
+    <inheritable>true</inheritable>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <genes>
+	  <li>AOSGitz_LoonBossGene</li>
+	  <li>AOSGitz_FungalMeat</li>
+	  <li>Ageless</li>
+	  <li>DarkVision</li>
+	  <li>CaveDweller</li>
+	  <li>UVSensitivity_Mild</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>Hair_BaldOnly</li>
+	  <li>WoundHealing_Fast</li>
+	  <li>MinTemp_SmallDecrease</li>
+	  <li>MaxTemp_SmallIncrease</li>
+	  <li>Aggression_Aggressive</li>
+	  <li>StrongStomach</li>
+	  <li>Body_Standard</li>
+	  <li>Mood_Pessimist</li>
+	  <li>AptitudeStrong_Social</li>
+	  <li>AptitudeStrong_Intellectual</li>
+	  <li>AptitudePoor_Cooking</li>
+	  <li>MeleeDamage_Strong</li>
+	  <li>Beauty_Ugly</li>
+	  <li MayRequire="RedMattis.BetterPrerequisites">Body_MaleOnly</li>
+	  <li>Skin_JerryCustomGrotGreen</li>
+	  <li>Skin_ZarbagGreen</li>
+	  <li>Skin_BoggleEyeGreen</li>
+    </genes>
+  </XenotypeDef>
+  
+</Defs>

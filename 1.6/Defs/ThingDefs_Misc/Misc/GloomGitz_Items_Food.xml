@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThoughtDef>
+    <defName>AOSGitz_AteMeal</defName>
+    <durationDays>1</durationDays>
+    <stages>
+      <li>
+        <label>ate grot cooking</label>
+        <description>unevenly cooked, the seasoning was horrible, and i tasted dirt at some point, but it could have been worse.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+    <replaceThoughts>
+      <li>AOSGitz_AteMeal</li>
+    </replaceThoughts>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>AOSGitz_DrankBooze</defName>
+    <durationDays>0.5</durationDays>
+    <stages>
+      <li>
+        <label>drank fungal grog</label>
+        <description>some of the foulest swill ive ever tasted, at least it gets me drunk.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+    <replaceThoughts>
+      <li>AOSGitz_DrankBooze</li>
+    </replaceThoughts>
+  </ThoughtDef>
+
+  <ThingDef ParentName="MealBaseIngredientless" Name="MealGrotCookedIngredientless" Abstract="True">
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>5</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="MealGrotBase" ParentName="MealGrotCookedIngredientless" Abstract="True">
+    <statBases>
+      <MarketValue>11</MarketValue>
+      <WorkToMake>325</WorkToMake>
+      <Nutrition>0.95</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+      <tasteThought>AOSGitz_AteMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetFeedingAnimals>-55</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="MealGrotBase">
+    <defName>AOSGitz_Meal_Veg</defName>
+    <label>Crude mushroom stew</label>
+    <description>A crude stew made from fungus, its a meal fit for a Grot.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Gitz/FungalBroth</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>NonMeat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MealGrotBase">
+    <defName>AOSGitz_Meal_Meat</defName>
+    <label>Crude meat stew</label>
+    <description>A crude stew made from low quality meat, its a meal fit for a Grot.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/Gitz/FungalMeatBroth</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!-- Made from the yeast that grows on Shamans toes (i wish i was brave enough to write that on this lmfao) -->
+  <ThingDef ParentName="DrugBase">
+    <defName>AOSGitz_Grog</defName>
+    <label>Fungal Grog</label>
+    <description>Spoiled mushrooms mixed with the various wild yeasts that infest Grot camps, Fungal Grog is a quick way to get drunk but fairly disgusting to most races except the ones who make it.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AlcoholHigh</HediffDef>
+      <HediffDef>AlcoholTolerance</HediffDef>
+      <HediffDef>Hangover</HediffDef>
+      <HediffDef>AlcoholAddiction</HediffDef>
+      <HediffDef>Cirrhosis</HediffDef>
+      <HediffDef>ChemicalDamageModerate</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Resource/Gitz/FungalGrog</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>35</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.3</DeteriorationRate>
+      <MarketValue>7</MarketValue>
+      <Mass>0.28</Mass>
+      <Flammability>0.85</Flammability>
+      <Nutrition>0.07</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.12</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+	  <tasteThought>AOSGitz_DrankBooze</tasteThought>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <tableDesired>false</tableDesired>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholHigh</hediffDef>
+          <severity>0.20</severity>
+          <toleranceChemical>Alcohol</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <toleranceChemical>Alcohol</toleranceChemical>
+          <severity>0.020</severity>
+          <divideByBodySize>false</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <techLevel>Neolithic</techLevel>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.010</addictiveness>
+        <minToleranceToAddict>0.25</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>10</listOrder>
+      </li>
+    </comps>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>

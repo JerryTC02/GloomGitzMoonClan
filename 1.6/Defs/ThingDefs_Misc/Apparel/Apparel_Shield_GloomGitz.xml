@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Apparel_AOSGitz_MoonclanShield</defName>
+    <label>Moonclan Shield</label>
+    <description>Simple wooden shields with heraldry representing Da Bad Moon on its front, they arent very effective but its better then not having a shield.\n\nWeapons above 3 mass will be forcibly dropped if equipped.</description>
+    <thingClass>Apparel</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Shields/Basic/Shield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>3</Mass>
+      <WorkToMake>5000</WorkToMake>
+      <Flammability>1</Flammability>
+      <EquipDelay>0.75</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <costList>
+	  <WoodLog>20</WoodLog>
+      <Steel>5</Steel>
+	  <Dye>1</Dye>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>GloomGitz_Moonclan_Basic</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <soundWorking>Recipe_MakeBow</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+      <displayPriority>501</displayPriority>
+    </recipeMaker>
+    <tradeTags>
+      <li>MoonClan_Shield</li>
+    </tradeTags>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+	        <drawData>
+                <dataSouth>
+                    <layer>75</layer>
+                    <offset>(0.26, 0., -0.2)</offset>
+                </dataSouth>
+                <dataWest>
+                    <layer>75</layer>
+                    <offset>(-0.29, 0.0, -0.2)</offset>
+                </dataWest>
+                <dataEast>
+                    <layer>75</layer>
+                    <offset>(0.29, 0.0, -0.2)</offset>
+                </dataEast>
+                <dataNorth>
+				    <layer>10</layer>
+                    <offset>(-0.24, 0.0, -0.1)</offset>
+                </dataNorth>
+            </drawData>
+	  <wornGraphicPath>Things/Item/Equipment/Gitz/WeaponMelee/Shields/Basic/Shield</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+	  <tags Inherit="False">
+       <li>MoonClan_Shield</li>
+      </tags>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </apparel>
+        <comps>
+            <li Class="CVN_HandShield.CompProperties_HandheldShield">
+			    <useItemHPasShieldHP>false</useItemHPasShieldHP>
+                <shieldMaxHP>32</shieldMaxHP>
+                <shieldRechargeAmount>10</shieldRechargeAmount>
+                <damageToShieldMultiplier>1</damageToShieldMultiplier>
+                <minimumWorkingHp>10</minimumWorkingHp>
+                <repairOvertime>true</repairOvertime>
+                <repairInterval>25</repairInterval>
+                <repairDelayTicks>5250</repairDelayTicks>
+                <repairAmount>5</repairAmount>
+                <repairPercent>0.01</repairPercent>
+				<weaponWeightLimit>3</weaponWeightLimit>
+                <isDropWeaponIfOverweight>true</isDropWeaponIfOverweight>
+                <isShieldStopFunctionIfOverweight>true</isShieldStopFunctionIfOverweight>
+            </li>
+        </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Apparel_AOSGitz_MoonclanLoonShield</defName>
+    <label>Loonsquire Shield</label>
+    <description>Simple metal shields forged in the shape of the moon, often used by Loonsquires until they are brave enough to fight without protection.\n\nWeapons above 3 mass will be forcibly dropped if equipped.</description>
+    <thingClass>Apparel</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Shields/Loon/LoonShield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>3.2</Mass>
+      <WorkToMake>9500</WorkToMake>
+      <Flammability>0</Flammability>
+      <EquipDelay>1.15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>45</Steel>
+	  <Dye>3</Dye>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>GloomGitz_Moonclan_Loonboon</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+      <displayPriority>502</displayPriority>
+    </recipeMaker>
+    <tradeTags>
+      <li>MoonClan_Shield</li>
+    </tradeTags>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+	        <drawData>
+                <dataSouth>
+                    <layer>75</layer>
+                    <offset>(0.26, 0., -0.2)</offset>
+                </dataSouth>
+                <dataWest>
+                    <layer>75</layer>
+                    <offset>(-0.29, 0.0, -0.2)</offset>
+                </dataWest>
+                <dataEast>
+                    <layer>75</layer>
+                    <offset>(0.29, 0.0, -0.2)</offset>
+                </dataEast>
+                <dataNorth>
+				    <layer>10</layer>
+                    <offset>(-0.24, 0.0, -0.1)</offset>
+                </dataNorth>
+            </drawData>
+	  <wornGraphicPath>Things/Item/Equipment/Gitz/WeaponMelee/Shields/Loon/LoonShield</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+	  <tags Inherit="False">
+       <li>MoonClan_Loon_Shield</li>
+      </tags>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </apparel>
+        <comps>
+            <li Class="CVN_HandShield.CompProperties_HandheldShield">
+			    <useItemHPasShieldHP>false</useItemHPasShieldHP>
+                <shieldMaxHP>55</shieldMaxHP>
+                <shieldRechargeAmount>10</shieldRechargeAmount>
+                <damageToShieldMultiplier>0.9</damageToShieldMultiplier>
+                <minimumWorkingHp>10</minimumWorkingHp>
+                <repairOvertime>true</repairOvertime>
+                <repairInterval>25</repairInterval>
+                <repairDelayTicks>4000</repairDelayTicks>
+                <repairAmount>5</repairAmount>
+                <repairPercent>0.01</repairPercent>
+				<weaponWeightLimit>3</weaponWeightLimit>
+                <isDropWeaponIfOverweight>true</isDropWeaponIfOverweight>
+                <isShieldStopFunctionIfOverweight>true</isShieldStopFunctionIfOverweight>
+				<immuneDamageDef>
+                    <li>Flame</li>
+					<li>Frostbite</li>
+                </immuneDamageDef>
+            </li>
+        </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Apparel_AOSGitz_MoonclanBossShield</defName>
+    <label>Moonclan Boss Shield</label>
+    <description>Ornate metal shields made in the spitting image of Da Bad Moon, the best shield a Moonclan Grot could get his hands on.\n\nWeapons above 3 mass will be forcibly dropped if equipped.</description>
+    <thingClass>Apparel</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Shields/Boss/ChiefShield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>3</Mass>
+      <WorkToMake>9500</WorkToMake>
+      <Flammability>0</Flammability>
+      <EquipDelay>1.15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>55</Steel>
+	  <Dye>5</Dye>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>GloomGitz_Moonclan_Advanced</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>503</displayPriority>
+    </recipeMaker>
+    <tradeTags>
+      <li>MoonClan_MageUtility</li>
+    </tradeTags>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+	        <drawData>
+                <dataSouth>
+                    <layer>75</layer>
+                    <offset>(0.26, 0., -0.2)</offset>
+                </dataSouth>
+                <dataWest>
+                    <layer>75</layer>
+                    <offset>(-0.29, 0.0, -0.2)</offset>
+                </dataWest>
+                <dataEast>
+                    <layer>75</layer>
+                    <offset>(0.29, 0.0, -0.2)</offset>
+                </dataEast>
+                <dataNorth>
+				    <layer>10</layer>
+                    <offset>(-0.23, 0.0, -0.1)</offset>
+                </dataNorth>
+            </drawData>
+	  <wornGraphicPath>Things/Item/Equipment/Gitz/WeaponMelee/Shields/Boss/ChiefShield</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+	  <tags Inherit="False">
+       <li>MoonClan_Boss_Shield</li>
+      </tags>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </apparel>
+        <comps>
+            <li Class="CVN_HandShield.CompProperties_HandheldShield">
+			    <useItemHPasShieldHP>false</useItemHPasShieldHP>
+                <shieldMaxHP>85</shieldMaxHP>
+                <shieldRechargeAmount>10</shieldRechargeAmount>
+                <damageToShieldMultiplier>0.9</damageToShieldMultiplier>
+                <minimumWorkingHp>10</minimumWorkingHp>
+                <repairOvertime>true</repairOvertime>
+                <repairInterval>25</repairInterval>
+                <repairDelayTicks>5000</repairDelayTicks>
+                <repairAmount>5</repairAmount>
+                <repairPercent>0.01</repairPercent>
+				<weaponWeightLimit>3</weaponWeightLimit>
+                <isDropWeaponIfOverweight>true</isDropWeaponIfOverweight>
+                <isShieldStopFunctionIfOverweight>true</isShieldStopFunctionIfOverweight>
+				<immuneDamageDef>
+                    <li>Flame</li>
+					<li>Frostbite</li>
+                </immuneDamageDef>
+            </li>
+        </comps>
+  </ThingDef>
+
+</Defs>

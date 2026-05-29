@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>AOSGitz_CaveSquig</defName>
+    <label>Cave Squig</label>
+    <devNote>Squig</devNote>
+    <description>The most common variety of Squig across the realms, a majority of squig breeds descend from the humble Cave Squig. Ravenous and ill tempered, Cave Squigs make for great warbeasts and unreliable but effective mounts.</description>
+    <statBases>
+      <MoveSpeed>4.7</MoveSpeed>
+      <MarketValue>450</MarketValue>
+	  <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <FilthRate>1</FilthRate>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+      <ToxicEnvironmentResistance>0.65</ToxicEnvironmentResistance>
+	  <MinimumHandlingSkill>6</MinimumHandlingSkill>
+      <Wildness>0.65</Wildness>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>AOSGitz_EggSquigFertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>AOSGitz_EggSquigFertilized</eggFertilizedDef>
+		<eggLayFemaleOnly>false</eggLayFemaleOnly>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>10</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+    <race>
+      <body>JTC_BasicSquig</body>
+      <predator>true</predator>
+	  <disableMating>true</disableMating>
+	  <specificMeatDef>Meat_AOSGitz_Squig</specificMeatDef>
+	  <hasGenders>false</hasGenders>
+      <petness>0.25</petness>
+      <baseBodySize>2</baseBodySize>
+      <baseHungerRate>0.27</baseHungerRate>
+      <baseHealthScale>1.05</baseHealthScale>
+      <maxPreyBodySize>2.1</maxPreyBodySize>
+      <foodType>OmnivoreAnimal</foodType>
+      <leatherDef>Leather_Wolf</leatherDef>
+      <gestationPeriodDays>10</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainability>Advanced</trainability>
+      <specialTrainables>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">AttackTarget</li>
+      </specialTrainables>
+      <manhunterOnTameFailChance>0.50</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+	  	<wildBiomes>
+				<Underground>0.30</Underground>
+				<ColdBog>0.12</ColdBog>
+				<TemperateSwamp>0.14</TemperateSwamp>
+				<AridShrubland>0.13</AridShrubland>
+				<Desert>0.17</Desert>
+		</wildBiomes>
+      <lifeExpectancy>50</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <soundEating>PredatorLarge_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.2)</li>
+        <li>(0.3, 0, 0.03)</li>
+        <li>(0.0, 0, -0.16)</li>
+        <li>(-0.3, 0, 0.03)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+	  <li>GloomGitzSquig</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>left leg</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+		  <li>Blunt</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>13</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+		<chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>right leg</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+		  <li>Blunt</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+		<chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>large maw</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.1</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.9</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.4</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>AOSGitz_CaveSquig</defName>
+    <label>Cave Squig</label>
+    <race>AOSGitz_CaveSquig</race>
+    <combatPower>125</combatPower>
+	<minGenerationAge>1</minGenerationAge>
+    <maxGenerationAge>5</maxGenerationAge>
+    <ecoSystemWeight>0.40</ecoSystemWeight>
+	<wildGroupSize>1~3</wildGroupSize>
+    <lifeStages>
+      <li>
+        <label>squigling</label>
+        <labelPlural>squiglings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/Squig/Squig</texPath>
+          <drawSize>1.55</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/Squig/Dessicated_Squig</texPath>
+          <drawSize>1.55</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/Squig/Squig</texPath>
+          <drawSize>2.55</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/Squig/Dessicated_Squig</texPath>
+          <drawSize>2.55</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/Squig/Squig</texPath>
+          <drawSize>3.35</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/Squig/Dessicated_Squig</texPath>
+          <drawSize>3.35</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>AOSGitz_GnashaSquig</defName>
+    <label>Gnasha Squig</label>
+    <devNote>Squig</devNote>
+    <description>A smaller breed of Cave Squig known for being less foul tempered and somewhat loyal to their handlers. Generally seen assisting Squig Handlers or working under Squigbosses as personal guard dogs.</description>
+    <statBases>
+      <MoveSpeed>5.1</MoveSpeed>
+      <MarketValue>200</MarketValue>
+	  <ComfyTemperatureMax>55</ComfyTemperatureMax>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <FilthRate>1</FilthRate>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ToxicEnvironmentResistance>0.65</ToxicEnvironmentResistance>
+	  <MinimumHandlingSkill>4</MinimumHandlingSkill>
+      <Wildness>0.35</Wildness>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>AOSGitz_EggGnashaSquigFertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>AOSGitz_EggGnashaSquigFertilized</eggFertilizedDef>
+		<eggLayFemaleOnly>false</eggLayFemaleOnly>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>8</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+    <race>
+      <body>JTC_BasicSquig</body>
+      <predator>true</predator>
+	  <disableMating>true</disableMating>
+	  <hasGenders>false</hasGenders>
+      <petness>0.45</petness>
+      <baseBodySize>0.85</baseBodySize>
+      <baseHungerRate>0.16</baseHungerRate>
+      <baseHealthScale>1.05</baseHealthScale>
+      <maxPreyBodySize>1.3</maxPreyBodySize>
+      <foodType>OmnivoreAnimal</foodType>
+      <leatherDef>Leather_Wolf</leatherDef>
+      <gestationPeriodDays>10</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainability>Advanced</trainability>
+      <specialTrainables>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">AttackTarget</li>
+      </specialTrainables>
+      <manhunterOnTameFailChance>0.35</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+	  	<wildBiomes>
+				<Underground>0.30</Underground>
+				<ColdBog>0.12</ColdBog>
+				<TemperateSwamp>0.14</TemperateSwamp>
+				<AridShrubland>0.13</AridShrubland>
+				<Desert>0.17</Desert>
+		</wildBiomes>
+      <useMeatFrom>AOSGitz_CaveSquig</useMeatFrom>
+      <lifeExpectancy>25</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.2</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      <soundEating>PredatorLarge_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.2)</li>
+        <li>(0.3, 0, 0.03)</li>
+        <li>(0.0, 0, -0.16)</li>
+        <li>(-0.3, 0, 0.03)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags>
+	  <li>GloomGitzSquig</li>
+    </tradeTags>
+    <tools>
+      <li>
+        <label>left leg</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+		  <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>7</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+		<chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>right leg</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+		  <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>7</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+		<chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>large maw</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>1.65</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.9</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>13</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2.1</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.4</chanceFactor>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>AOSGitz_GnashaSquig</defName>
+    <label>Gnasha Squig</label>
+    <race>AOSGitz_GnashaSquig</race>
+    <combatPower>65</combatPower>
+	<minGenerationAge>2</minGenerationAge>
+    <maxGenerationAge>5</maxGenerationAge>
+    <ecoSystemWeight>0.30</ecoSystemWeight>
+	<wildGroupSize>2~5</wildGroupSize>
+    <lifeStages>
+      <li>
+        <label>squigling</label>
+        <labelPlural>squiglings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/GnashaSquig/GnashaSquig</texPath>
+          <drawSize>0.55</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/Squig/Dessicated_Squig</texPath>
+          <drawSize>0.75</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/GnashaSquig/GnashaSquig</texPath>
+          <drawSize>0.85</drawSize>
+          <shadowData>
+            <volume>(0.25, 0.3, 0.25)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/GnashaSquig/Dessicated_Squig</texPath>
+          <drawSize>1.15</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/GnashaSquig/GnashaSquig</texPath>
+          <drawSize>1.15</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gitz/Squig/Dessicated_Squig</texPath>
+          <drawSize>1.45</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

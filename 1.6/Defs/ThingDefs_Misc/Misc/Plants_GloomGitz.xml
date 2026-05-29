@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="CavePlantBase">
+    <defName>Plant_AOSGitz_Dyeshroom</defName>
+    <label>Specklecap</label>
+    <description>Multicolored fungi of various species commonly known as "Specklecap", usually grown in large colorful piles to provide the Moonclans with the various paints they use to represent Da Bad Moon and Glareface Frazzlegit. It can grow on fungal gravel, but only in darkness - exposing it to any kind of light, including darklights, will kill it.</description>
+    <statBases>
+      <MaxHitPoints>65</MaxHitPoints>
+	  <Beauty>1</Beauty>
+	  <Nutrition>0.05</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Gitz/Dyeshroom/Dyeshroom</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>12</pathCost>
+    <ingestible />
+    <plant>
+	  <sowWork>600</sowWork>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>Dye</harvestedThingDef>
+      <harvestYield>1</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+	  <sowResearchPrerequisites Inherit="False">
+        <li>GloomGitz_Moonclan_Plants</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0</topWindExposure>
+      <growDays>3</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.3~0.65</visualSizeRange>
+      <purpose>Misc</purpose>
+      <maxMeshCount>9</maxMeshCount>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="CavePlantBase">
+    <defName>Plant_AOSGitz_Clothshroom</defName>
+    <label>Softstool</label>
+    <description>Dainty mushrooms with soft mycelium strands that hang from their cap, these strands are remarkably similar to cloth and Grots spin them into a material mostly indentical to traditional cotton cloth. It can grow on fungal gravel, but only in darkness - exposing it to any kind of light, including darklights, will kill it.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+	  <Nutrition>0.05</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Gitz/Clothshroom/Clothshroom</texPath>
+	  <drawSize>1.15</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>11</pathCost>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>Cloth</harvestedThingDef>
+      <harvestYield>10</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+	  <sowResearchPrerequisites Inherit="False">
+        <li>GloomGitz_Moonclan_Plants</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0</topWindExposure>
+      <growDays>9</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.25~0.50</visualSizeRange>
+      <purpose>Misc</purpose>
+      <maxMeshCount>4</maxMeshCount>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="CavePlantBase">
+    <defName>Plant_AOSGitz_Healshroom</defName>
+    <label>Gitfixer Fungus</label>
+    <description>Small green mushrooms that are held in high regard by every Grot that ever stubbed his toe or got stabbed by his fellow Git for their ability to dull pain and "fix them up right" quickly. It can grow on fungal gravel, but only in darkness - exposing it to any kind of light, including darklights, will kill it.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+	  <Nutrition>0.1</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Gitz/Healshroom/Healshroom</texPath>
+	  <drawSize>0.95</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>11</pathCost>
+    <ingestible />
+    <plant>
+	  <growDays>8</growDays>
+      <sowWork>900</sowWork>
+      <sowMinSkill>8</sowMinSkill>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>AOSGitz_MedicineHerbal</harvestedThingDef>
+      <harvestYield>1</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+	  <sowResearchPrerequisites Inherit="False">
+        <li>GloomGitz_Moonclan_Plants</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0</topWindExposure>
+      <growDays>9</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.25~0.50</visualSizeRange>
+      <purpose>Misc</purpose>
+      <maxMeshCount>9</maxMeshCount>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="MedicineBase">
+    <defName>AOSGitz_MedicineHerbal</defName>
+    <label>Healing Shrooms</label>
+    <description>A crude bundle of various medicinal mushrooms harvested in the dank grottos of the Moonclans, they would be surprisingly effective were it not for the lack of skill most Shamans possess with measuring the right dosage.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Gitz/Shroommedicine</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>0.35</Mass>
+      <Flammability>1.2</Flammability>
+      <MedicalPotency>0.60</MedicalPotency>
+      <MedicalQualityMax>0.70</MedicalQualityMax>
+      <DeteriorationRate>6</DeteriorationRate>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>150</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <allowedArchonexusCount>20</allowedArchonexusCount>
+  </ThingDef>
+  
+  <ThingDef ParentName="CavePlantBase">
+    <defName>Plant_AOSGitz_Deffcap</defName>
+    <label>Deffcap</label>
+    <description>Smells like death, and some who eat it wish they died, Deffcaps are a hallucinogenic fungus cultivated and used by many Grot clans. It can grow on fungal gravel, but only in darkness - exposing it to any kind of light, including darklights, will kill it.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+	  <Nutrition>0.05</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Gitz/Deffcap/Deffcap</texPath>
+	  <drawSize>1.15</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>15</pathCost>
+    <ingestible />
+    <plant>
+	  <harvestYield>6</harvestYield>
+      <sowMinSkill>5</sowMinSkill>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>AOSGitz_Rawdeffcap</harvestedThingDef>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+	  <sowResearchPrerequisites Inherit="False">
+        <li>GloomGitz_Moonclan_Plants</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0</topWindExposure>
+      <growDays>11</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.50~0.65</visualSizeRange>
+	  <drugForHarvestPurposes>True</drugForHarvestPurposes>
+      <maxMeshCount>4</maxMeshCount>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>AOSGitz_Rawdeffcap</defName>
+    <label>Raw Deffcaps</label>
+    <description>Raw Deffcap mushrooms, overconsumption of the raw fungus can cause a dangerous buildup of fresh spores in the brain which leads to the victims head bursting into a fresh Deffcap. Rarely some Grots survive the process and become powerful Fungoid Cave Shamans.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Gitz/Deffcap/DefcapFruitCrate</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Flammability>1</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+  </ThingDef>
+  
+  <ThingDef ParentName="CavePlantBase">
+    <defName>Plant_AOSGitz_MadCap</defName>
+    <label>Madcap Mushrooms</label>
+    <description>One of the most common drugs seen among Grots, Madcaps are especially popular for their ability to remove a Grots natural instinct to flee and allowing them to seemingly dance through enemy lines like even the most graceful of Aelves. In reality it makes them unpredictable, insane, and the "graceful dance" looks more like being blackout drunk mixed with a spinning top. It can grow on fungal gravel, but only in darkness - exposing it to any kind of light, including darklights, will kill it.</description>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+	  <Nutrition>0.04</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Gitz/MadCap/MadCap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>15</pathCost>
+    <ingestible />
+    <plant>
+	  <harvestYield>6</harvestYield>
+      <sowMinSkill>5</sowMinSkill>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>AOSGitz_Rawmadcap</harvestedThingDef>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+	  <sowResearchPrerequisites Inherit="False">
+        <li>GloomGitz_Moonclan_Plants</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0</topWindExposure>
+      <growDays>8</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.50~0.65</visualSizeRange>
+	  <drugForHarvestPurposes>True</drugForHarvestPurposes>
+      <maxMeshCount>9</maxMeshCount>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>AOSGitz_Rawmadcap</defName>
+    <label>Raw Madcap Mushrooms</label>
+    <description>Raw Madcap mushrooms, commonly confused with Madcap Toadstools which look nearly indentical to the naked eye and often grow alongside normal Madcaps. Most grots simply hope the amount of mushrooms they put into a brew drowns out the effects of the toadstools.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Gitz/Madcap/MadcapFruitCrate</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Flammability>1</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+  </ThingDef>
+  
+  <ThingDef ParentName="CavePlantBase">
+    <defName>Plant_AOSGitz_LoonCap</defName>
+    <label>Looncap</label>
+    <description>Powerful fungi of varying sizes found only in places touched by Da Bad Moons light, they are highly coveted by the Gloomspite Gitz for all manner of rituals and potions. It can grow on fungal gravel, but only in darkness - exposing it to any kind of light, including darklights, will kill it.</description>
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+	  <Nutrition>0.01</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Gitz/Looncap/Looncap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>15</pathCost>
+    <ingestible />
+    <plant>
+	  <harvestYield>1</harvestYield>
+      <sowMinSkill>8</sowMinSkill>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>AOSGitz_Looncap</harvestedThingDef>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+	  <sowResearchPrerequisites Inherit="False">
+        <li>GloomGitz_Moonclan_Plants</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0</topWindExposure>
+      <growDays>30</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.45~1.00</visualSizeRange>
+	  <drugForHarvestPurposes>False</drugForHarvestPurposes>
+      <maxMeshCount>1</maxMeshCount>
+    </plant>
+  </ThingDef>
+
+</Defs>

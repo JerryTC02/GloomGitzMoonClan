@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>AOSGitz_HealingPotion</defName>
+    <label>Fungal Elixir</label>
+    <description>Unreliable yet wildly distributed "brews" that vary heavily in quality depending on the Shaman who made it, with much of the effects being purely placebo. Thankfully at least some of the fungi used in producing have genuine healing properties, and some of these concotions find their way into black markets across the known realms, mostly sold to those who are truly desperate or as oddities to collectors.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AOSGitz_HealingPotionHigh</HediffDef>
+      <HediffDef>AOSGitz_HealingPotionHighTrue</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Resource/Gitz/HealingPotion</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>625</WorkToMake>
+      <MarketValue>42</MarketValue>
+      <Mass>0.12</Mass>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <baseIngestTicks>200</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <drugCategory>Medical</drugCategory>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.23,0,0.065)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <useEatingSpeedStat>true</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AOSGitz_HealingPotionHigh</hediffDef>
+          <severity>1</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AOSGitz_HealingPotionHighTrue</hediffDef>
+          <severity>1</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Food</need>
+          <offset>0.05</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>GloomGitz_Moonclan_Plants</researchPrerequisite>
+      <recipeUsers>
+        <li>AOSgitz_Drugbench</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+      <displayPriority>1</displayPriority>
+    </recipeMaker>
+    <costList>
+      <AOSGitz_MedicineHerbal>4</AOSGitz_MedicineHerbal>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+        <overdoseSeverityOffset>0.23~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.035</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>AOSGitz_HealingPotionHigh</defName>
+    <label>fungal placebo</label>
+    <labelNoun>a placebo effect</labelNoun>
+    <description>Active "medical" spores in the bloodstream. Mostly provides placebo effects, as well as warding off the common flu.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.50</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <makeImmuneTo>
+            <li>Flu</li>
+          </makeImmuneTo>
+          <painFactor>0.95</painFactor>
+          <statFactors>
+            <ImmunityGainSpeed>1.10</ImmunityGainSpeed>
+			<InjuryHealingFactor>1.10</InjuryHealingFactor>
+          </statFactors>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>AOSGitz_HealingPotionHighTrue</defName>
+    <label>fungal healing</label>
+    <labelNoun>a healing effect</labelNoun>
+    <description>Active medical and magical spores in the bloodstream. Provides a short lived but genuine healing effect on lesser wounds.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+	  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+					<min>585</min>
+					<max>600</max>
+			</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="CVNPatronAbilities.HediffCompProperties_HealingOvertime">
+                <totalHealAmount>36</totalHealAmount>
+                <amountHealedPerTrigger>2</amountHealedPerTrigger>
+                <interval>22</interval>
+                <isHealingOneAtATime>false</isHealingOneAtATime>
+                <isPrioritizeWorstInjury>true</isPrioritizeWorstInjury>
+                <isHealingAllInjuryEvenly>true</isHealingAllInjuryEvenly>
+                <isRemoveOnceFullyHeal>false</isRemoveOnceFullyHeal>
+            </li>
+    </comps>
+      <stages>
+        <li>
+          <statFactors>
+          </statFactors>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>AOSGitz_HealingPotionHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>AOSGitz_HealingPotionHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>drank fungal elixir</label>
+        <description>gross, but the shaman said it'll help</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

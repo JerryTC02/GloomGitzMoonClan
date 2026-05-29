@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="AteHumanlikeMeatAsIngredient"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AteHumanlikeMeatAsIngredient"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="AteHumanlikeMeatAsIngredient"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="AteInsectMeatAsIngredient"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="KnowPrisonerDiedInnocent"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="KnowPrisonerDiedInnocent"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="KnowPrisonerDiedInnocent"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="DeadMansApparel"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="DeadMansApparel"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="DeadMansApparel"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="ButcheredHumanlikeCorpse"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="ButcheredHumanlikeCorpse"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="ButcheredHumanlikeCorpse"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="KnowButcheredHumanlikeCorpse"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="KnowButcheredHumanlikeCorpse"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="KnowButcheredHumanlikeCorpse"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="ButcheredHumanlikeCorpseOpinion"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="ButcheredHumanlikeCorpseOpinion"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="ButcheredHumanlikeCorpseOpinion"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="ObservedLayingCorpse"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="ObservedLayingRottingCorpse"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="ObservedLayingRottingCorpse"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="ObservedLayingRottingCorpse"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>      
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="Ugly"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="Ugly"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="Ugly"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="Disfigured"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="Disfigured"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="Disfigured"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="KnowColonistExecuted"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="KnowColonistExecuted"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="KnowColonistExecuted"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="KnowColonistDied"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="KnowColonistDied"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="KnowColonistDied"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="KnowGuestExecuted"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="KnowGuestExecuted"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="KnowGuestExecuted"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="AOSGitz_AteMeal"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AOSGitz_AteMeal"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="AOSGitz_AteMeal"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>  
+   </value>
+</Operation>
+
+<Operation Class="PatchOperationConditional">
+   <xpath>Defs/ThoughtDef[defName="AOSGitz_DrankBooze"]/nullifyingGenes</xpath>
+   <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="AOSGitz_DrankBooze"]</xpath>
+      <value>
+       <nullifyingGenes>
+       </nullifyingGenes>
+      </value>
+   </nomatch>
+</Operation>
+    
+<Operation Class="PatchOperationAdd">
+   <xpath>Defs/ThoughtDef[defName="AOSGitz_DrankBooze"]/nullifyingGenes</xpath>
+   <value>
+      <li>AOSGitz_FungalMeat</li>  
+   </value>
+</Operation>
+
+
+</Patch>

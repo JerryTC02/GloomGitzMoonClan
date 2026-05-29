@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <WorkGiverDef>
+    <defName>DoBillsGloomGitzTailor</defName>
+    <label>tailoring things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Tailoring</workType>
+    <priorityInType>110</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AOSGitz_Tailor</li>
+    </fixedBillGiverDefs>
+    <verb>tailoring at</verb>
+    <gerund>tailoring things at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsGloomGitzForge</defName>
+    <label>smith things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>115</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AOSgitz_Smithy</li>
+    </fixedBillGiverDefs>
+    <verb>smithing at</verb>
+    <gerund>smithing things at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsGloomGitzAlchemy</defName>
+    <label>brew things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>95</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AOSgitz_Drugbench</li>
+    </fixedBillGiverDefs>
+    <verb>brewing at</verb>
+    <gerund>brewing things at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsGloomGitzCampfire</defName>
+    <label>cook things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>101</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AOSGitz_Campfire</li>
+    </fixedBillGiverDefs>
+    <verb>cook at</verb>
+    <gerund>cooking at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsGloomGitzBrewCampfire</defName>
+    <label>brew things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>102</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AOSGitz_BrewCampfire</li>
+    </fixedBillGiverDefs>
+    <verb>brew at</verb>
+    <gerund>brewing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <DesignatorDropdownGroupDef>
+    <defName>AOSgitz_Production</defName>
+    <label>Grot Production</label>
+  </DesignatorDropdownGroupDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>AOSGitz_Tailor</defName>
+    <label>Grot Fabrik Table</label>
+	<designatorDropdown>AOSgitz_Production</designatorDropdown>
+    <description>A crude table with a pile of fabric scraps, a broken loom, and a sharp slitta to cut it into shape.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/Gitz/Tailor/GloomspitzTailor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,2)</drawSize>
+	  <shadowData>
+        <volume>(1.5, 0.22, 0.47)</volume>
+        <offset>(0, 0, 0.08)</offset>
+      </shadowData>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	<costList>
+      <Steel>10</Steel>
+	  <WoodLog>35</WoodLog>
+    </costList>
+    <castEdgeShadows>true</castEdgeShadows>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>1200</WorkToBuild>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>1.5</Flammability>
+      <WorkTableWorkSpeedFactor>0.45</WorkTableWorkSpeedFactor>
+	  <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <size>(2,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>10001</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>35</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <paintable>false</paintable>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.95</workTableNotInRoomRoleFactor>
+    </building>
+    <comps>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>GloomGitz_Basic</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>AOSgitz_Smithy</defName>
+    <label>Grot Hammering Spot</label>
+	<designatorDropdown>AOSgitz_Production</designatorDropdown>
+    <description>A stolen and damaged anvil for beating metal salvage into crude weaponry and tools.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/Production/Gitz/Smith/GloomspitzSmithy</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,2)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <costList>
+	  <Steel>30</Steel>
+	  <WoodLog>30</WoodLog>
+    </costList>
+	<castEdgeShadows>true</castEdgeShadows>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>0.75</Flammability>
+	  <WorkTableWorkSpeedFactor>0.75</WorkTableWorkSpeedFactor>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <size>(2,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>10001</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+	  <paintable>false</paintable>
+      <workTableNotInRoomRoleFactor>0.95</workTableNotInRoomRoleFactor>
+    </building>
+    <comps>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>GloomGitz_Basic</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>AOSgitz_Drugbench</defName>
+    <label>Grot Shamans Bench</label>
+	<designatorDropdown>AOSgitz_Production</designatorDropdown>
+    <description>A very nice table by Grot standards, filled with various shrooms, moss, and other oddities used to produce the disgusting concoctions they dare to call "potions". The small cauldron at its side is source of much disdain from many assistants, for the smells wafting from it can range from mildly annoying to outright dangerous depending on the ingredients within.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/Gitz/Drugs/GloomspitzAlchemy</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(5,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <costList>
+      <Steel>40</Steel>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>3200</WorkToBuild>
+      <MaxHitPoints>115</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <paintable>false</paintable>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.9</workTableNotInRoomRoleFactor>
+    </building>
+    <comps>
+	  <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+	  <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>4</heatPerSecond>
+        <heatPushMaxTemperature>4</heatPushMaxTemperature>
+      </li>
+	  <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>20.0</fuelConsumptionRate>
+        <fuelCapacity>25.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <canEjectFuel>true</canEjectFuel>
+      </li>
+    </comps>
+	<recipes>
+    </recipes>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>GloomGitz_Moonclan_Drugs</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="BenchBase">
+    <defName>AOSGitz_Campfire</defName>
+    <label>Grot Cookpot</label>
+	<designatorDropdown>AOSgitz_Production</designatorDropdown>
+    <description>Crude metal pots used for stewing various herbs, meat scraps, and of course, Mushrooms. Grot cooking isnt quite as bad as Orruk "cuisine" but its certainly not something anyone wants to experience twice.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/Gitz/Campfire/CookingPot_Lit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+      <drawSize>(1.8,1.8)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	<uiIconScale>0.65</uiIconScale>
+	<costList>
+      <Steel>30</Steel>
+	  <WoodLog>25</WoodLog>
+    </costList>
+    <castEdgeShadows>true</castEdgeShadows>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>700</WorkToBuild>
+      <MaxHitPoints>190</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkTableWorkSpeedFactor>0.90</WorkTableWorkSpeedFactor>
+	  <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <size>(1,1)</size>
+    <recipes>
+      <li>CookMealSimple</li>
+      <li>CookMealSimpleBulk</li>
+      <li>Make_Pemmican</li>
+      <li>Make_PemmicanBulk</li>
+	  <li>AOSGitzCookMealBulk_Meat</li>
+	  <li>AOSGitzCookMealBulk_Veg</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Make_BabyFood</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">Make_BabyFoodBulk</li>
+    </recipes>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>10001</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>35</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <paintable>false</paintable>
+    </building>
+    <comps>
+	  <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>120.0</fuelConsumptionRate>
+        <fuelCapacity>35.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <canEjectFuel>true</canEjectFuel>
+      </li>
+	  <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>4</heatPerSecond>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>GloomGitz_Basic</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="BenchBase">
+    <defName>AOSGitz_BrewCampfire</defName>
+    <label>Brewgit Grogpot</label>
+	<designatorDropdown>AOSgitz_Production</designatorDropdown>
+    <description>Sturdy brass pots made to brew quick but disgusting fungal based alcohol, while typically carried by Brewgits they can also be set down for more longterm production.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/Gitz/Campfire/CookingPot_Brewing</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+      <damageData>
+        <rect>(0.2,0,0.6,0.1)</rect>
+      </damageData>
+      <drawSize>(1.8,1.8)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	<uiIconScale>0.65</uiIconScale>
+	<costList>
+      <Steel>40</Steel>
+	  <WoodLog>25</WoodLog>
+    </costList>
+    <castEdgeShadows>true</castEdgeShadows>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>850</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkTableWorkSpeedFactor>1</WorkTableWorkSpeedFactor>
+	  <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <size>(1,1)</size>
+    <recipes>
+      <li>Make_Wort</li>
+	  <li>AOSGitz_Make_Grog</li>
+    </recipes>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>10001</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>35</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <paintable>false</paintable>
+    </building>
+    <comps>
+	  <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>120.0</fuelConsumptionRate>
+        <fuelCapacity>30.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <canEjectFuel>true</canEjectFuel>
+      </li>
+	  <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>3</heatPerSecond>
+      </li>
+	  <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>GloomGitz_Moonclan_Drugs</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

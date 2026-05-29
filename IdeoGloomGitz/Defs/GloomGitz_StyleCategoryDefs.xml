@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <StyleCategoryDef>
+    <defName>AOSGitz_MoonClan</defName>
+    <label>Gitz</label>
+    <iconPath>UI/Icons/Xenotypes/Xenotype_LoonBoss</iconPath>
+    <thingDefStyles>
+      <li>
+        <thingDef>Table1x2c</thingDef>
+        <styleDef>AOSGitz_Table1x2c</styleDef>
+      </li>
+	  <li>
+        <thingDef>Shelf</thingDef>
+        <styleDef>AOSGitz_Shelf</styleDef>
+      </li>
+	  <li>
+        <thingDef>RoyalBed</thingDef>
+        <styleDef>AOSGitz_RoyalBed</styleDef>
+      </li>
+	  <li>
+        <thingDef>EndTable</thingDef>
+        <styleDef>AOSGitz_EndTable</styleDef>
+      </li>
+	  <li MayRequire="Ludeon.RimWorld.Royalty">
+        <thingDef>GrandThrone</thingDef>
+        <styleDef>AOSGitz_GrandThrone</styleDef>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">
+        <thingDef>Throne</thingDef>
+        <styleDef>AOSGitz_Throne</styleDef>
+      </li>
+    </thingDefStyles>
+  </StyleCategoryDef>
+
+
+
+</Defs>

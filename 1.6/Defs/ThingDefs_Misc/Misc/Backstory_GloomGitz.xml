@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+  <BackstoryDef>
+    <defName>AOSGitz_Spore</defName>
+    <identifier>Grot Spore</identifier>
+    <slot>Childhood</slot> 
+    <title>Spore</title>
+    <titleShort>Spore</titleShort>
+    <description>[PAWN_nameDef] spent his early life in a spore cocoon deep in the soil until he was ready to emerge, likely in some dank cave or fungal grotto.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzSpore</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_LoneSpore</defName>
+    <identifier>Lone Spore</identifier>
+    <slot>Childhood</slot> 
+	 <skillGains>
+      <Melee>1</Melee>
+      <Plants>2</Plants>
+	  <Social>-2</Social>
+    </skillGains>
+    <title>Lone Spore</title>
+    <titleShort>Lone Spore</titleShort>
+    <description>[PAWN_nameDef] was left behind during a large battle, and was lucky enough for his budding cocoon to be missed by the enemy. Other Grots view him as abit off, but are impressed he survived the trip home from enemy territory.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzSpore</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_StruggleSpore</defName>
+    <identifier>Struggling Spore</identifier>
+    <slot>Childhood</slot> 
+	 <skillGains>
+      <Melee>1</Melee>
+	  <Mining>2</Mining>
+	  <Construction>1</Construction>
+    </skillGains>
+    <title>Struggling Spore</title>
+    <titleShort>Struggling Spore</titleShort>
+    <description>[PAWN_nameDef] had his spore land in extremely poor soil, terrain so barren even Greenskins struggle to take root. Many spores in these conditions fail, but [PAWN_nameDef] survived and the hardship made him tougher then other Grots.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzSpore</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_MoonSpore</defName>
+    <identifier>Moontouched Spore</identifier>
+    <slot>Childhood</slot> 
+	 <skillGains>
+      <Intellectual>1</Intellectual>
+	  <Medicine>1</Medicine>
+	  <Social>2</Social>
+    </skillGains>
+    <title>Moontouched Spore</title>
+    <titleShort>Moon Spore</titleShort>
+    <description>[PAWN_nameDef] grew in a fungal grotto that had been touched by Da Bad Moon itself, Gloomspite energy seeped into his very bones and made him quite wise for a Grot.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzSpore</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_TwinSpore</defName>
+    <identifier>Twin Spore</identifier>
+    <slot>Childhood</slot> 
+	 <skillGains>
+      <Melee>-1</Melee>
+	  <Mining>-1</Mining>
+	  <Social>2</Social>
+    </skillGains>
+    <title>Moontouched Spore</title>
+    <titleShort>Moon Spore</titleShort>
+    <description>[PAWN_nameDef] shared a cocoon with another Grot, and somehow didnt wind up killing eachother. This has left him weaker from the lack of nutrients, but more amicable to being "friendly" with his fellow Grots, [PAWN_pronoun] does wish his twin was still around to use as a scapegoat however.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzSpore</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_Git</defName>
+    <identifier>Git</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>1</Melee>
+      <Mining>2</Mining>
+	  <Construction>1</Construction>
+	  <Intellectual>-2</Intellectual>
+    </skillGains>
+    <title>Git</title>
+    <titleShort>Git</titleShort>
+    <description>[PAWN_nameDef] is not notable, just another Grot trying to survive, hundreds like him die every day.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBasic</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_Staba</defName>
+    <identifier>Stabba</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>3</Melee>
+	  <Intellectual>-1</Intellectual>
+	  <Artistic>-1</Artistic>
+    </skillGains>
+    <title>Stabba</title>
+    <titleShort>Stabba</titleShort>
+    <description>[PAWN_nameDef] was conscripted into a Stabba mob, handed a spear or rusty blade and told to hold the line against enemies far larger then him. Most Stabbas dont survive their first day, so [PAWN_nameDef] learned quickly to either strike first or be first to flee.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBasic</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_Shoota</defName>
+    <identifier>Shoota</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Shooting>3</Shooting>
+	  <Intellectual>-1</Intellectual>
+	  <Artistic>-1</Artistic>
+    </skillGains>
+    <title>Stabba</title>
+    <titleShort>Stabba</titleShort>
+    <description>[PAWN_nameDef] was conscripted into a Shoota mob, most Grots are quite happy to be handed a bow and told to stay far away from the fighting. Shootas still only live alittle longer then most Stabbas do, so [PAWN_nameDef] tries to make sure the enemy dies long before they get near him.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBasic</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_Hopper</defName>
+    <identifier>Hopper</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>2</Melee>
+      <Animals>2</Animals>
+    </skillGains>
+    <title>Hopper</title>
+    <titleShort>Hopper</titleShort>
+    <description>[PAWN_nameDef] managed to mount a squig once, and join the ranks of the Squig Hoppers. Squig Hoppers dont live long if they cant learn a few tricks to calm a rampaging Squig down.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBasic</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_Herder</defName>
+    <identifier>Squig Herder</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>1</Melee>
+	  <Plants>1</Plants>
+      <Animals>3</Animals>
+    </skillGains>
+    <title>Squig Herder</title>
+    <titleShort>Herder</titleShort>
+    <description>[PAWN_nameDef] makes his living herding Squigs, its some of the most profitable and most dangerous work a Grot can undertake.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBasic</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_Addict</defName>
+    <identifier>Shroom Addict</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>2</Melee>
+	  <Plants>3</Plants>
+	  <Intellectual>-2</Intellectual>
+	  <Social>-2</Social>
+    </skillGains>
+    <title>Shroom Addict</title>
+    <titleShort>Addict</titleShort>
+    <description>[PAWN_nameDef] is a quite pathetic Grot, spending his days high on any fungi he can get his hands on. To fuel his need for shrooms, [PAWN_nameDef] has picked up a few tricks on foraging and fighting off small Squigs while rummaging in Shamans scrap bins.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBasic</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_Boss</defName>
+    <identifier>Boss</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>3</Melee>
+	  <Shooting>1</Shooting>
+	  <Social>2</Social>
+    </skillGains>
+    <title>Boss</title>
+    <titleShort>Boss</titleShort>
+    <description>[PAWN_nameDef] is an old Grot, capable of bullying a few gitz into listening to him, forming a small Skulkmob. [PAWN_nameDef] spends just as much time fighting the enemy as he does fighting off sneaky gitz who want his position for themselves.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBoss</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_SquigBoss</defName>
+    <identifier>SquigBoss</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>2</Melee>
+	  <Social>2</Social>
+	  <Animals>3</Animals>
+    </skillGains>
+    <title>Boss</title>
+    <titleShort>Boss</titleShort>
+    <description>[PAWN_nameDef] has survived and thrived in the business of Squig Herding, he even has a few Squigs who are fond of him, and would be sad to see him die. [PAWN_nameDef] tries (and often fails) to teach other Squig Herders his tricks, hoping to make them do all the hard work while he sits back and enjoys a brew.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBoss</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_WiseBoss</defName>
+    <identifier>Wise Grot</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Social>2</Social>
+	  <Intellectual>2</Intellectual>
+	  <Medicine>2</Medicine>
+	  <Plants>2</Plants>
+    </skillGains>
+    <title>Wise Grot</title>
+    <titleShort>Wise Grot</titleShort>
+    <description>[PAWN_nameDef] is a member of a Gobbapalooza, a council of Grot mages and wise-grots who look into more delicate matters for the local Loonboss, hoping to either please him or find a way to take his place.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBoss</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_LoonBoss</defName>
+    <identifier>Loonboss</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>4</Melee>
+	  <Shooting>2</Shooting>
+	  <Social>4</Social>
+	  <Animals>1</Animals>
+	  <Intellectual>1</Intellectual>
+    </skillGains>
+    <title>Boss</title>
+    <titleShort>Boss</titleShort>
+    <description>[PAWN_nameDef] has risen to lead an entire Skrap of Grots, through a mix of cunning and brutality that would make even an Orruk impressed he has managed to convince several Skulkmobs that hes stronger then them. The secret to his success? being very good at tricking others, taking any advantage he can get, and frankly just being lucky he didnt die to a Squig when he first hatched from his cocoon.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzBigBoss</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>AOSGitz_Loonlord</defName>
+    <identifier>Loonlord</identifier>
+    <slot>Adulthood</slot> 
+    <skillGains>
+	  <Melee>3</Melee>
+	  <Social>4</Social>
+	  <Animals>2</Animals>
+	  <Intellectual>3</Intellectual>
+    </skillGains>
+    <title>Loonlord</title>
+    <titleShort>Loonlord</titleShort>
+    <description>[PAWN_nameDef] is very talented in the use of mind altering mushrooms, and with that talent he has turned cowardly and selfish Grots into brave, insane, and utterly devoted Loonknights dedicated to serving him. This tactic of drugging Grots into believing they are knights was first invented by Grinrak The Great, and many imitators like [PAWN_nameDef] have come to use the same technique for themselves.</description>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>GloomGitzLoonLord</li>
+    </spawnCategories>
+    <shuffleable>True</shuffleable>
+  </BackstoryDef>
+    
+</Defs>

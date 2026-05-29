@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef Abstract="True" Name="EggSquigBase" ParentName="OrganicProductBase" >
+    <graphicData>
+      <texPath>Things/Pawn/Animal/Gitz/Squig/SquigSpore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <ingestible>
+      <foodType>Fungus</foodType>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <tasteThought>AteRawFood</tasteThought>
+    </ingestible>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <Mass>0.05</Mass>
+      <MaxHitPoints>5</MaxHitPoints>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Flammability>1</Flammability>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.25</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+        <disableIfHatcher>true</disableIfHatcher>
+      </li>
+    </comps>
+    <allowedArchonexusCount>10</allowedArchonexusCount>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="EggSquigUnfertBase" ParentName="EggSquigBase" >
+    <ingestible>
+      <preferability>RawBad</preferability>
+    </ingestible>
+    <thingCategories>
+      <li>EggsUnfertilized</li>
+    </thingCategories>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="EggSquigFertBase" ParentName="EggSquigBase" >
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+    <thingCategories>
+      <li>EggsFertilized</li>
+    </thingCategories>
+    <comps>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="EggSquigUnfertBase">
+    <defName>AOSGitz_EggSquigUnfertilized</defName>
+    <label>cave squig spore clump (unfert.)</label>
+    <description>An unfertilized squig spore. It can be eaten raw, but it's much safer cooked</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="EggSquigFertBase">
+    <defName>AOSGitz_EggSquigFertilized</defName>
+    <label>cave squig spore clump (fert.)</label>
+    <description>A fertilized cave squig spore. If all goes well, it should grow into a cave squig. It can be eaten raw, but it's much safer cooked.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>5</hatcherDaystoHatch>
+        <hatcherPawn>AOSGitz_CaveSquig</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="EggSquigUnfertBase">
+    <defName>AOSGitz_EggGnashaSquigUnfertilized</defName>
+    <label>gnasha squig spore clump (unfert.)</label>
+    <description>An unfertilized squig spore. It can be eaten raw, but it's much safer cooked</description>
+    <graphicData>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="EggSquigFertBase">
+    <defName>AOSGitz_EggGnashaSquigFertilized</defName>
+    <label>gnasha squig spore clump (fert.)</label>
+    <description>A fertilized gnasha squig spore. If all goes well, it should grow into a gnasha squig. It can be eaten raw, but it's much safer cooked.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>4</hatcherDaystoHatch>
+        <hatcherPawn>AOSGitz_GnashaSquig</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>

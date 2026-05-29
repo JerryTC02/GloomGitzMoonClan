@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "AOSGitz_LoonShrine"]/costList</xpath>
+		<value>
+	     <costList>
+          <DankPyon_IronIngot>250</DankPyon_IronIngot>
+		  <DankPyon_Bone>50</DankPyon_Bone>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "AOSGitz_Tailor"]/costList</xpath>
+		<value>
+	     <costList>
+          <DankPyon_IronIngot>15</DankPyon_IronIngot>
+		  <DankPyon_RawWood>35</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "AOSgitz_Smithy"]/costList</xpath>
+		<value>
+	     <costList>
+          <DankPyon_IronIngot>30</DankPyon_IronIngot>
+		  <DankPyon_RawWood>30</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "AOSgitz_Drugbench"]/costList</xpath>
+		<value>
+	     <costList>
+          <DankPyon_IronIngot>40</DankPyon_IronIngot>
+	      <WoodLog>50</WoodLog>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "AOSGitz_Campfire"]/costList</xpath>
+		<value>
+	     <costList>
+          <DankPyon_IronIngot>30</DankPyon_IronIngot>
+		  <DankPyon_RawWood>25</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+    <Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "AOSGitz_BrewCampfire"]/costList</xpath>
+		<value>
+	     <costList>
+          <DankPyon_IronIngot>40</DankPyon_IronIngot>
+		  <DankPyon_RawWood>25</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Apparel_AOSGitz_MoonclanShield"]/costList</xpath>
+		<value>
+	     <costList>
+          <DankPyon_IronIngot>5</DankPyon_IronIngot>
+	      <WoodLog>20</WoodLog>
+		  <Dye>1</Dye>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Apparel_AOSGitz_MoonclanLoonShield"]/costList</xpath>
+		<value>
+	     <costList>
+          <DankPyon_IronIngot>45</DankPyon_IronIngot>
+		  <Dye>3</Dye>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Apparel_AOSGitz_MoonBossHood"]/costList</xpath>
+		<value>
+	     <costList>
+	      <Cloth>60</Cloth>
+	      <DankPyon_IronIngot>5</DankPyon_IronIngot>
+	      <Dye>1</Dye>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Apparel_AOSGitz_LoonSquireHelm"]/costList</xpath>
+		<value>
+	     <costList>
+	      <DankPyon_IronIngot>45</DankPyon_IronIngot>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Apparel_AOSGitz_MoonHandlerMask"]/costList</xpath>
+		<value>
+	     <costList>
+	      <DankPyon_IronIngot>50</DankPyon_IronIngot>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Apparel_AOSGitz_MoonBossRobe"]/costList</xpath>
+		<value>
+	     <costList>
+	      <Cloth>75</Cloth>
+	      <DankPyon_IronIngot>10</DankPyon_IronIngot>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Apparel_AOSGitz_LoonSquire"]/costList</xpath>
+		<value>
+	     <costList>
+	      <Cloth>75</Cloth>
+	      <DankPyon_IronIngot>45</DankPyon_IronIngot>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Apparel_AOSGitz_MoonHandler"]/costList</xpath>
+		<value>
+	     <costList>
+	      <Cloth>65</Cloth>
+	      <DankPyon_IronIngot>75</DankPyon_IronIngot>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "MeleeWeapon_AOSGitz_Slitta"]/costList</xpath>
+		<value>
+	     <costList>
+	      <DankPyon_IronIngot>25</DankPyon_IronIngot>
+		  <DankPyon_RawWood>1</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "MeleeWeapon_AOSGitz_Stabba"]/costList</xpath>
+		<value>
+	     <costList>
+	      <DankPyon_IronIngot>45</DankPyon_IronIngot>
+		  <DankPyon_RawWood>5</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "MeleeWeapon_AOSGitz_Pokspear"]/costList</xpath>
+		<value>
+	     <costList>
+	      <DankPyon_IronIngot>60</DankPyon_IronIngot>
+		  <DankPyon_RawWood>5</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "MeleeWeapon_AOSGitz_HandlerSpear"]/costList</xpath>
+		<value>
+	     <costList>
+	      <DankPyon_IronIngot>60</DankPyon_IronIngot>
+		  <DankPyon_RawWood>10</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+	<Operation Class = "PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "MeleeWeapon_AOSGitz_LoonStick"]/costList</xpath>
+		<value>
+	     <costList>
+		  <DankPyon_RawWood>40</DankPyon_RawWood>
+         </costList>
+		</value>
+	</Operation>
+	
+</Patch>

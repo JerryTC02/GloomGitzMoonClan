@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Apparel_AOSGitz_Spitelantern</defName>
+    <label>Sniffer-Spite Cage</label>
+    <description>A small cage containing an imprisoned Sniffer-Spite, elusive nature spirits with a talent for finding rare plants and fungi.\n\nWeapons above 3 mass will be forcibly dropped if equipped.</description>
+    <thingClass>Apparel</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Specialized/SpriteLantern/SpriteLantern</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.70</drawSize>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>2</Mass>
+      <WorkToMake>4500</WorkToMake>
+      <Flammability>0</Flammability>
+      <EquipDelay>0.4</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+	    <PsychicSensitivityOffset>0.02</PsychicSensitivityOffset>
+        <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.04</PsychicEntropyRecoveryRate>
+		<PlantWorkSpeed>0.05</PlantWorkSpeed>
+		<DrugHarvestYield>0.20</DrugHarvestYield>
+		<ForagedNutritionPerDay>0.15</ForagedNutritionPerDay>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>60</Steel>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>GloomGitz_Moonclan_Mages</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <soundWorking>Recipe_MakeBow</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+      <displayPriority>401</displayPriority>
+    </recipeMaker>
+    <tradeTags>
+      <li>MoonClan_MageUtility</li>
+    </tradeTags>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+	        <drawData>
+                <dataSouth>
+                    <layer>75</layer>
+                </dataSouth>
+                <dataWest>
+                    <layer>75</layer>
+                </dataWest>
+                <dataEast>
+                    <layer>75</layer>
+                </dataEast>
+                <dataNorth>
+				    <layer>20</layer>
+                </dataNorth>
+            </drawData>
+	  <wornGraphicPath>Things/Item/Equipment/Gitz/WeaponMelee/Specialized/SpriteLantern/SpriteLantern</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+	  <tags Inherit="False">
+       <li>MoonClan_MageUtility</li>
+      </tags>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </apparel>
+        <comps>
+            <li Class="CVN_HandShield.CompProperties_HandheldShield">
+				<weaponWeightLimit>3</weaponWeightLimit>
+                <isDropWeaponIfOverweight>true</isDropWeaponIfOverweight>
+                <isShieldStopFunctionIfOverweight>true</isShieldStopFunctionIfOverweight>
+            </li>
+			<li Class="CompProperties_Glower">
+               <glowRadius>1</glowRadius>
+               <glowColor>(127,215,220,0)</glowColor>
+            </li>
+			<li Class="EquippedGlowers.CompProperties_EquippedGlower">
+                <glowColor>127,215,220</glowColor>
+                <glowRadius>1</glowRadius>
+            </li>
+        </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Apparel_AOSGitz_LoonLordScepter</defName>
+    <label>Loonlord Scepter</label>
+    <description>A small scepter with a carved stone skull, made to bolster Grinraks magical prowess and used to properly knight newly promoted Loonsquires.\n\nWeapons above 3 mass will be forcibly dropped if equipped.</description>
+    <thingClass>Apparel</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Loons/LoonlordScepter/LoonlordScepter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>0.70</drawSize>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <Mass>1.2</Mass>
+      <WorkToMake>10500</WorkToMake>
+      <Flammability>0</Flammability>
+      <EquipDelay>0.2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+		<SocialImpact>0.05</SocialImpact>
+	    <PsychicSensitivityOffset>0.06</PsychicSensitivityOffset>
+        <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.08</PsychicEntropyRecoveryRate>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>35</Steel>
+	  <WoodLog>15</WoodLog>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+      <researchPrerequisite>GloomGitz_Moonclan_VeryAdvanced</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+      <displayPriority>402</displayPriority>
+    </recipeMaker>
+    <tradeTags>
+      <li>MoonClan_MageUtility</li>
+    </tradeTags>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <apparel>
+	        <drawData>
+                <dataSouth>
+                    <layer>75</layer>
+                </dataSouth>
+                <dataWest>
+                    <layer>75</layer>
+                </dataWest>
+                <dataEast>
+                    <layer>75</layer>
+                </dataEast>
+                <dataNorth>
+				    <layer>20</layer>
+                </dataNorth>
+            </drawData>
+	  <wornGraphicPath>Things/Item/Equipment/Gitz/WeaponMelee/Loons/LoonlordScepter/LoonlordScepter</wornGraphicPath>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+	  <tags Inherit="False">
+       <li>MoonClan_MageUtilityElite</li>
+      </tags>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    </apparel>
+        <comps>
+            <li Class="CVN_HandShield.CompProperties_HandheldShield">
+				<weaponWeightLimit>3</weaponWeightLimit>
+                <isDropWeaponIfOverweight>true</isDropWeaponIfOverweight>
+                <isShieldStopFunctionIfOverweight>true</isShieldStopFunctionIfOverweight>
+            </li>
+        </comps>
+  </ThingDef>
+
+</Defs>

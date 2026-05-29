@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="GloomGitzBaseMeleeWeapon_Sharp">
+    <defName>MeleeWeapon_AOSGitz_LoonStick</defName>
+    <label>Squig Stick (Empty)</label>
+    <techLevel>Medieval</techLevel>
+    <description>A very long branch, its very effective as a weapon. If a Grot is willing to try, tying a squig to it might turn this into a weapon to be feared.</description>
+	<thingClass>AssaultStick.AssaultStick</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Loons/LoonSquigstick_nosquig</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.25</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <statBases>
+      <WorkToMake>750</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+	<equippedStatOffsets>
+	</equippedStatOffsets>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+	<costList>
+	  <WoodLog>40</WoodLog>
+    </costList>
+    <weaponTags>
+	 <li>GloomGitzLoonKnightSquigStickA</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>tip</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
+	    <modExtensions>
+            <li Class="AssaultStick.DefModExtension_AssaultStick">
+                <abilityDefs>
+                    <li>AOSGitz_GrabGnasha</li>
+                </abilityDefs>
+                <flightEffecter />
+                <soundLanded />
+            </li>
+        </modExtensions>
+    <recipeMaker>
+      <researchPrerequisite>GloomGitz_Moonclan_Loonboon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+	  <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <displayPriority>7</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <AbilityDef ParentName="AbilityTouchBase">
+        <defName>AOSGitz_GrabGnasha</defName>
+        <label>Grab Squig</label>
+        <description>grab and tie a Gnasha Squig to the stick.</description>
+        <iconPath>Things/Pawn/Animal/Gitz/Squig/Squig_south</iconPath>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbilityTouch</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <range>-1</range>
+            <warmupTime>2.35</warmupTime>
+            <targetParams>
+                <canTargetAnimals>True</canTargetAnimals>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetHumans>false</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="AssaultStick.CompProperties_AbilityGrabAnimal">
+                <allowedAnimalDefs>
+                    <li>
+                        <animalDef>AOSGitz_GnashaSquig</animalDef>
+                        <weaponDef>MeleeWeapon_AOSGitz_LoonStickSquig</weaponDef>
+                    </li>
+                </allowedAnimalDefs>
+            </li>
+        </comps>
+    </AbilityDef>
+	
+  <ThingDef ParentName="GloomGitzBaseMeleeWeapon_Sharp">
+     <defName>MeleeWeapon_AOSGitz_LoonStickSquig</defName>
+     <label>Squig Stick</label>
+     <techLevel>Medieval</techLevel>
+     <description>A Gnasha Squig tied to a very long stick, while extremely primitive and unwieldy, an angry Squigs frantic biting and clawing is nothing to be scoffed out. The Squig can be let loose to cause chaos, but every Grot knows that Squigs tend to hold grudges and wont be too happy about being tied up for so long.</description>
+	 <thingClass>AssaultStick.AssaultStick</thingClass>
+     <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Loons/LoonSquigstick</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.25</drawSize>
+     </graphicData>
+     <uiIconScale>1.2</uiIconScale>
+     <statBases>
+      <Mass>4.2</Mass>
+     </statBases>
+	 <equippedStatOffsets>
+	 </equippedStatOffsets>
+     <equippedAngleOffset>-25</equippedAngleOffset>
+	 <costList>
+	  <WoodLog>40</WoodLog>
+     </costList>
+     <weaponTags>
+	  <li>GloomGitzLoonKnightSquigStickB</li>
+     </weaponTags>
+     <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>gnasha teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>14</power>
+        <extraMeleeDamages>
+          <li>
+            <def>Bite</def>
+            <amount>4</amount>
+            <chance>1</chance>
+          </li>
+		  <li>
+            <def>Bite</def>
+            <amount>2</amount>
+            <chance>0.75</chance>
+          </li>
+		  <li>
+            <def>Bite</def>
+            <amount>2</amount>
+            <chance>0.25</chance>
+          </li>
+        </extraMeleeDamages>
+        <cooldownTime>1.75</cooldownTime>
+      </li>
+     </tools>
+	    <modExtensions>
+            <li Class="AssaultStick.DefModExtension_AssaultStick">
+                <abilityDefs>
+                    <li>AOSGitz_ThrowGnasha</li>
+                </abilityDefs>
+                <flightEffecter />
+                <soundLanded />
+            </li>
+        </modExtensions>
+  </ThingDef>
+  
+  <AbilityDef>
+        <defName>AOSGitz_ThrowGnasha</defName>
+        <label>DA SQUIGS LOOSE!</label>
+        <description>allow the Squig to break free of its bindings, allowing it to bound forward towards its prey, It will not be happy about how you've treated it once its finished eating.</description>
+        <iconPath>Things/Pawn/Animal/Gitz/Squig/Squig_south</iconPath>
+        <hostile>false</hostile>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>1</warmupTime>
+            <range>8.9</range>
+            <muzzleFlashScale>0</muzzleFlashScale>
+            <onlyManualCast>true</onlyManualCast>
+            <targetParams>
+                <canTargetLocations>True</canTargetLocations>
+                <canTargetBuildings>false</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="AssaultStick.CompProperties_AbilityThrowAnimal">
+                <defaultWeaponDef>MeleeWeapon_AOSGitz_LoonStick</defaultWeaponDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+</Defs>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>AOSGitz_MadCapPotion</defName>
+    <label>Madcap Mead</label>
+    <description>A "mead" made with no honey or fruit, but instead from Madcap Mushrooms and Squigs blood, likely called mead due to Grots not understanding the finer points of brewing. Popular among Loon Fanatics to remove their fear of death and induce a complete and total insanity in the mist of battle. Most Shamans will often accidentally mix in Madcap Toadstools into the batch due to lack of care in sorting toadstools from mushrooms, which often leads to the user becoming highly sick or melting from the inside out.\n\nImbibing too much at once is generally a very good way to die.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AOSGitz_MadCapPotionHigh</HediffDef>
+      <HediffDef>AOSGitz_MadcapTolerance</HediffDef>
+      <HediffDef>AOSGitz_MadcapAddiction</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Resource/Gitz/MadcapPotion</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>42</MarketValue>
+      <Mass>0.15</Mass>
+    </statBases>
+    <techLevel>Medieval</techLevel>
+    <ingestible>
+      <joyKind>Chemical</joyKind>
+      <joy>0.65</joy>
+      <drugCategory>Hard</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>65</baseIngestTicks>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <useEatingSpeedStat>true</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AOSGitz_MadCapPotionHigh</hediffDef>
+          <severity>0.5</severity>
+          <toleranceChemical>AOSGitz_MadCap</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AOSGitz_MadcapTolerance</hediffDef>
+          <toleranceChemical>AOSGitz_MadCap</toleranceChemical>
+          <severity>0.05</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.5</offset>
+          <toleranceChemical>AOSGitz_MadCap</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>GloomGitz_Moonclan_Drugs</researchPrerequisite>
+      <recipeUsers>
+        <li>AOSgitz_Drugbench</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+      <displayPriority>1</displayPriority>
+    </recipeMaker>
+    <costList>
+	  <Meat_AOSGitz_Squig>10</Meat_AOSGitz_Squig>
+      <AOSGitz_Rawmadcap>9</AOSGitz_Rawmadcap>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>AOSGitz_MadCap</chemical>
+        <addictiveness>0.10</addictiveness>
+	    <minToleranceToAddict>0.14</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.21~0.23</overdoseSeverityOffset>
+        <largeOverdoseChance>0.02</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>AOSGitz_MadCapPotionHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on madcaps</label>
+    <labelNoun>a madcap frenzy</labelNoun>
+    <description>A high concentration of Madcap Brew in the bloodstream. Causes the user to abandon all reason, and act extremely unpredictably.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-4.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <label>maddened</label>
+          <painFactor>0.5</painFactor>
+		  <statFactors>
+            <RestFallRateFactor>0.75</RestFallRateFactor>
+			<MeleeCooldownFactor>0.90</MeleeCooldownFactor>
+			<MeleeDodgeChance>1.10</MeleeDodgeChance>
+          </statFactors>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.05</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>0.15</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.35</offset>
+            </li>
+          </capMods>
+        </li>
+		<li>
+		  <label>LOONY!!!</label>
+          <painFactor>0.25</painFactor>
+		  <minSeverity>0.51</minSeverity>
+		  <statFactors>
+            <RestFallRateFactor>0.35</RestFallRateFactor>
+			<MeleeCooldownFactor>0.70</MeleeCooldownFactor>
+			<MeleeDodgeChance>1.50</MeleeDodgeChance>
+          </statFactors>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.15</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>0.25</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.60</offset>
+            </li>
+          </capMods>
+		  <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.0001</mtbDays>
+          </li>
+        </mentalStateGivers>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>AOSGitz_MadCapPotionHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>AOSGitz_DeffcapPotionHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on madcap mead</label>
+        <description>HAHAHAHA</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+	  <li>
+        <label>lost to da brew</label>
+        <description>AHAHAHAHAHAHAHA AAAAAAAAAAAAAAHAAAAAAAAHHAAA!</description>
+        <baseMoodEffect>41</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ChemicalDef>
+    <defName>AOSGitz_MadCap</defName>
+    <label>madcap essence</label>
+    <addictionHediff>PsychiteAddiction</addictionHediff>
+    <toleranceHediff>AOSGitz_DeffcapTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+    <onGeneratedAddictedEvents>
+      <li>
+        <hediff>ChemicalDamageModerate</hediff>
+        <chance>0.5</chance>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+      </li>
+    </onGeneratedAddictedEvents>
+    <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+    <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    <geneOverdoseChanceFactorResist>0.5</geneOverdoseChanceFactorResist>
+    <geneOverdoseChanceFactorImmune>0</geneOverdoseChanceFactorImmune>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_AOSGitz_Madcap</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>madcap essence</label>
+    <description>Because of a madcap addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <listPriority>50</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>AOSGitz_MadcapTolerance</defName>
+    <label>madcap tolerance</label>
+    <description>A built-up tolerance to madcap essence. The more severe this tolerance is, the more madcap-based drugs it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.012</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>AOSGitz_MadCap</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageSevere</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 180)</li>
+            <li>(1, 135)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>AOSGitz_MadcapAddiction</defName>
+    <label>madcap addiction</label>
+    <description>A chemical addiction to madcaps. Long-term consumption of deffcaps has caused a dependence on madcaps to feel happy, so the brain can no longer function properly without the brew.\n\nWithout regular doses of brew, withdrawal symptoms will begin. However, extended abstinence will force the brain to heal, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <chemicalNeed>Chemical_AOSGitz_Madcap</chemicalNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0333</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <socialFightChanceFactor>3.5</socialFightChanceFactor>
+        <statOffsets>
+          <RestFallRateFactor>0.45</RestFallRateFactor>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>AOSGitz_MadCapWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>AOSGitz_MadcapAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>madcap withdrawal</label>
+        <description>i want to feel funny again, i wanna be loony.</description>
+        <baseMoodEffect>-25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

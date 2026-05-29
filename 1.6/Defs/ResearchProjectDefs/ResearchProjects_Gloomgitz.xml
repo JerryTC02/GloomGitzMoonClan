@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<ResearchTabDef>
+		<defName>JTC_AOSGrotz</defName>
+		<label>Grotz</label>
+	</ResearchTabDef>
+	
+    <ResearchProjectDef>
+		<defName>GloomGitz_Basic</defName>
+		<label>Da Gloomspitez</label>
+		<description>A great coalition of all the notable Grot and Troggoth clans who seek to bring an eternal midnight known as the Everdank, where Da Bad Moon stays forever in the sky and Gorkamorka reigns supreme.</description>
+		<baseCost>500</baseCost>
+		<tab>JTC_AOSGrotz</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>ComplexClothing</li>
+			<li>ComplexFurniture</li>
+			<li>Smithing</li>
+		</prerequisites>
+     <researchViewX>0.00</researchViewX>
+     <researchViewY>3.25</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>GloomGitz_Moonclan_Basic</defName>
+		<label>Da Moonclanz</label>
+		<description>Derranged Grots who dwell in the dark regions of the world, hiding in damp caves deep below the ground. Moonclans revere Da Bad Moon above the other gods of destruction, some believe it was born from a rock that Gorkamorka tried and failed to eat, while others believe it to be the physical embodiment of every Grot spellcaster who ever lived.</description>
+		<baseCost>350</baseCost>
+		<tab>JTC_AOSGrotz</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>GloomGitz_Basic</li>
+			<li>RecurveBow</li>
+		</prerequisites>
+     <researchViewX>1.00</researchViewX>
+     <researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+	
+    <ResearchProjectDef>
+		<defName>GloomGitz_Moonclan_Advanced</defName>
+		<label>Skulkmob Bosses</label>
+		<description>Bosses are Grots who've bullied enough of their peers to form a Skulkmob around themselves, typically being "veterans" of a handful of fights or just lucky enough to salvage a fairly large stabba. Every Grot dreams of being a boss, and every boss seeks to beat that dream out of him before he tries to act on it.</description>
+		<baseCost>650</baseCost>
+		<tab>JTC_AOSGrotz</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>GloomGitz_Moonclan_Basic</li>
+			<li>LongBlades</li>
+		</prerequisites>
+     <researchViewX>1.90</researchViewX>
+     <researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>GloomGitz_Moonclan_Mages</defName>
+		<label>Gobbapalooza</label>
+		<description>Councils of "wise grots" such as shamans, loonpriests, and other such spellflingers work to further the goals of their respective factions, or more often their own personal goals.</description>
+		<baseCost>850</baseCost>
+		<tab>JTC_AOSGrotz</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>GloomGitz_Moonclan_Advanced</li>
+		</prerequisites>
+     <researchViewX>2.75</researchViewX>
+     <researchViewY>0.00</researchViewY>
+	</ResearchProjectDef>
+	
+    <ResearchProjectDef>
+		<defName>GloomGitz_Moonclan_VeryAdvanced</defName>
+		<label>Skrap Leaders</label>
+		<description>Bosses of entire Lurklairs or major warbands, these Grots are often very old and if not wise? Strong enough to ensure no mere Boss thinks to oppose their authority.</description>
+		<baseCost>850</baseCost>
+		<tab>JTC_AOSGrotz</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>GloomGitz_Moonclan_Advanced</li>
+			<li>PlateArmor</li>
+		</prerequisites>
+     <researchViewX>2.75</researchViewX>
+     <researchViewY>0.50</researchViewY>
+	</ResearchProjectDef>
+	
+	<!-- why'd i put a madcap in your hand? Because I'm CRAAAZY!!!!! -->
+	<ResearchProjectDef>
+		<defName>GloomGitz_Moonclan_Loonboon</defName>
+		<label>Da Loonz</label>
+		<description>To be considered insane among the Moonclans is quite the feat, but with enough hallucigenic fungus and religious fervor a Grot can become much more unstable. Loon Fanatics vary heavily in personality and fighting style depending on the type of mushrooms they imbibe and the skill of those around them to influence their visions with words or trickery, but one thing is always true: Loons are quite dangerous and very mad.</description>
+		<baseCost>850</baseCost>
+		<tab>JTC_AOSGrotz</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>GloomGitz_Moonclan_Advanced</li>
+			<li>PlateArmor</li>
+		</prerequisites>
+     <researchViewX>2.75</researchViewX>
+     <researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Original Draft: "Fungus is the backbone of any Grot society, Mushrooms for healing, Fungi that makes your dick bigger" i typed that without realizing so im leaving it here to be laughed at -->
+    <ResearchProjectDef>
+		<defName>GloomGitz_Moonclan_Plants</defName>
+		<label>Speshul Shrooms</label>
+		<description>Fungus is the backbone of any Grot society, food, healing, recreation, without the plentiful Fungi that popular the great Lurklairs of the Moonclans many Grots would not survive. Despite this, these shrooms are also often the cause of many deaths both friend and foe, either due to the potent poisons they possess, or the catastrophic effects of imbibing the wrong dosage of a drug made from them.</description>
+		<baseCost>1000</baseCost>
+		<tab>JTC_AOSGrotz</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>GloomGitz_Moonclan_Basic</li>
+		</prerequisites>
+     <researchViewX>1.10</researchViewX>
+     <researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>GloomGitz_Moonclan_Drugs</defName>
+		<label>Fungal Brewin</label>
+		<description>The Shamans of the Moonclan specialize in producing various tinctures and brews for many different purposes, and often make heavy use of their own body to test them, typically leading to disasterous but often amusing results.</description>
+		<baseCost>650</baseCost>
+		<tab>JTC_AOSGrotz</tab>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>GloomGitz_Moonclan_Plants</li>
+			<li>DrugProduction</li>
+		</prerequisites>
+     <researchViewX>1.90</researchViewX>
+     <researchViewY>1.00</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

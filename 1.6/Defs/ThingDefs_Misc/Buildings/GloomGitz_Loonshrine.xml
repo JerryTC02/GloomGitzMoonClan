@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <WorkGiverDef>
+        <defName>Clone_HaulToGrowthVat</defName>
+        <giverClass>CloneVat.WorkGiver_HaulToGrowthVat</giverClass>
+        <workType>Hauling</workType>
+        <verb>haul to</verb>
+        <gerund>hauling to</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <priorityInType>90</priorityInType>
+  </WorkGiverDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>AOSGitz_LoonShrine</defName>
+    <label>Loonshrine</label>
+    <description>Shrines carved from giant pieces of loonstone left behind by Da Bad Moons influence on the mortal realms, imbued heavily with Gloomspite energy that causes them to sprout many kinds of sacred fungi. Below the shrine are networks of tunnels which were dug out originally to carry supplies to the in progress shrine, now used to protect and grow the next generation of Grot Spores to supply the Lurklair with fresh recruits.</description>
+    <thingClass>CloneVat.Building_CustomGrowthVat</thingClass>
+	<designatorDropdown>AOSgitz_Production</designatorDropdown>
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/Production/Gitz/Loonshrine/Loonshrine</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(8, 8)</drawSize>
+    </graphicData>
+	<uiIconScale>1</uiIconScale>
+    <castEdgeShadows>true</castEdgeShadows>
+    <size>5,3</size>
+    <statBases>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <WorkToBuild>40000</WorkToBuild>
+      <Mass>200</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>250</Steel>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>95</pathCost>
+    <blockWind>true</blockWind>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <fillPercent>0.9</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>5200</uiOrder>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <researchPrerequisites>
+      <li>GloomGitz_Basic</li>
+    </researchPrerequisites>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <buildingTags>
+        <li>Biotech</li>
+      </buildingTags>
+    </building>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <comps>
+	  <li Class="CloneVat.CompProperties_GrowthVatGraphics">
+        <pawnOffset>(0, .5, 0.2)</pawnOffset>
+	    <showPawn>false</showPawn>
+        <floatAmplitude>0.05</floatAmplitude>
+        <floatFrequency>0.02</floatFrequency>
+		<useBookDialog>true</useBookDialog>
+		<bookCustomization>
+          <!-- Basic colors -->
+          <BookColor>(107, 99, 85)</BookColor>
+          <PageColor>(0.65, 0.65, 0.65)</PageColor>
+          <InkColor>(0.1, 0.1, 0.1)</InkColor>
+          <HighlightColor>(57, 134, 48)</HighlightColor>
+          <!-- Text -->
+          <BookTitle>Grot Spore Colony</BookTitle>
+          <TitleFont>Medium</TitleFont>
+          <ContentFont>Small</ContentFont>
+          <!-- Layout -->
+          <BookMargin>25</BookMargin>
+          <PageWidthRatio>0.5</PageWidthRatio>
+          <EntriesPerPage>15</EntriesPerPage>
+          <!-- Decorations -->
+          <ShowPageNumbers>false</ShowPageNumbers>
+          <ShowSpine>false</ShowSpine>
+          <ShowDividers>false</ShowDividers>
+          <!--  <CustomBackgroundTexturePath>UI/Backgrounds/BookBackground</CustomBackgroundTexturePath>
+          <CustomPageTexturePath>UI/Backgrounds/BookPage</CustomPageTexturePath> -->
+          <!-- Sounds -->
+          <PageTurnSound>RowTabSelect</PageTurnSound>
+          <EntrySelectSound>Click</EntrySelectSound>
+          <!-- Button styles -->
+          <SelectButtonColor>(0.4, 0.8, 0.4)</SelectButtonColor>
+          <SearchBoxColor>(0.7, 0.7, 0.7, 0.3)</SearchBoxColor>
+          <!-- Portrait settings -->
+          <PortraitSize>(150,150)</PortraitSize>
+          <PortraitRotation>South</PortraitRotation>
+		  <SectionOrder>
+            <li>Description</li>
+			<li>Growth Information</li>
+			<li>Requirements</li>
+            <li>Characteristics</li>
+          </SectionOrder>
+        </bookCustomization>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,679 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ScenarioDef ParentName="ScenarioBase">
+        <defName>AOSGitz_BasicStart</defName>
+        <label>Following Da Moon</label>
+        <description>Da Bad Moon didnt speak to you, but it showed you things, it showed a vision of you standing before your very own Lurklair, and you liked that vision. Stealing some young Squigs and threatening a few weaker Grots, you formed a small Skulkmob and made your way to the last known location of Da Bad Moons light.</description>
+        <scenario>
+            <summary>5 Grots planning to settle and defile yet another realm with their vulgar ways.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>PlayerColonyAOSGitzGrot</factionDef>
+            </playerFaction>
+            <parts>
+            <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
+            <def>ConfigurePawnsKindDefs</def>
+            <pawnChoiceCount>5</pawnChoiceCount>
+          <kindCounts>
+            <li>
+              <kindDef>AOSGitz_GrotBoss_Colonist</kindDef>
+              <count>1</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+            <li>
+              <kindDef>AOSGitz_Grot_Colonist</kindDef>
+              <count>4</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+          </kindCounts>
+             </li>
+                <li Class="ScenPart_PlayerPawnsArriveMethod">
+                    <def>PlayerPawnsArriveMethod</def>
+                    <method>Standing</method>
+                    <visible>false</visible>
+                </li>
+				<li Class="ScenPart_StartingResearch">
+				 <def>StartingResearch</def>
+				 <project>GloomGitz_Basic</project>
+			    </li>
+			    <li Class="ScenPart_StartingResearch">
+				 <def>StartingResearch</def>
+				 <project>GloomGitz_Moonclan_Basic</project>
+			    </li>
+                <!-- Items -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_HealingPotion</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_MedicineHerbal</thingDef>
+                    <count>15</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_Meal_Meat</thingDef>
+                    <count>12</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_Grog</thingDef>
+                    <count>10</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Silver</thingDef>
+                    <count>50</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>RawFungus</thingDef>
+                    <count>300</count>
+                </li>
+				<!-- Apparel -->
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_AOSGitz_MoonclanShield</thingDef>
+                    <count>1</count>
+                </li>
+				<!-- Weapon -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_AOSGitz_Slitta</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_AOSGitz_Stabba</thingDef>
+                    <count>2</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_Moonclan_Bow</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingAnimal">
+				  <def>StartingAnimal</def>
+                  <animalKind>AOSGitz_CaveSquig</animalKind>
+                  <count>1</count>
+                  <bondToRandomPlayerPawnChance>0.1</bondToRandomPlayerPawnChance>
+                </li>
+				<li Class="ScenPart_StartingAnimal">
+				  <def>StartingAnimal</def>
+                  <animalKind>AOSGitz_GnashaSquig</animalKind>
+                  <count>2</count>
+                  <bondToRandomPlayerPawnChance>0.5</bondToRandomPlayerPawnChance>
+                </li>
+				<li Class="ScenPart_NoPossessions">
+                   <def>NoPossessions</def>
+                </li>
+				<!-- Scattered -->
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>WoodLog</thingDef>
+                    <count>325</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Steel</thingDef>
+                    <count>75</count>
+                </li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>Steel</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>100</count>
+                </li>
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>Your starting to think that vision was from Glareface Frazzlegit instead of Da Bad Moon, there isnt any Looncaps or Loonstone in the area, nor are the humies here particularly weak or disorganized. But you already stole from your boss and you dont have enough supplies to make it back home so, time to do what Grots do best: make do with what you got.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+            </parts>
+        </scenario>
+    </ScenarioDef>
+	
+  <ScenarioDef ParentName="ScenarioBase">
+        <defName>AOSGitz_LoonCourtStart</defName>
+        <label>Loonquest</label>
+        <description>You have called upon your court of honorable knights and given unto them the task of escorting you to a holy site on which you intend to build a new temple to Da Bad Moons glory. At least thats what the mushrooms made them believe, in reality you tried to usurp the local Loonboss and frankly it completely failed, so now your on the run and need to find somewhere safe to lay low forawhile.</description>
+        <scenario>
+            <summary>7(4) Loonknights on a great and highly important quest, led by their Loonlord.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>PlayerColonyAOSGitzGrot</factionDef>
+            </playerFaction>
+            <parts>
+            <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
+            <def>ConfigurePawnsKindDefs</def>
+            <pawnChoiceCount>5</pawnChoiceCount>
+          <kindCounts>
+            <li>
+              <kindDef>AOSGitz_GrotGrinrak</kindDef>
+              <count>1</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+            <li>
+              <kindDef>AOSGitz_GrotBurk</kindDef>
+              <count>1</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+			<li>
+              <kindDef>AOSGitz_GrotSnark</kindDef>
+              <count>1</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+			<li>
+              <kindDef>AOSGitz_GrotGrib</kindDef>
+              <count>1</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+			<li>
+              <kindDef>AOSGitz_GrotNagz</kindDef>
+              <count>1</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+          </kindCounts>
+             </li>
+                <li Class="ScenPart_PlayerPawnsArriveMethod">
+                    <def>PlayerPawnsArriveMethod</def>
+                    <method>Standing</method>
+                    <visible>false</visible>
+                </li>
+				<li Class="ScenPart_StartingResearch">
+				 <def>StartingResearch</def>
+				 <project>GloomGitz_Basic</project>
+			    </li>
+			    <li Class="ScenPart_StartingResearch">
+				 <def>StartingResearch</def>
+				 <project>GloomGitz_Moonclan_Basic</project>
+			    </li>
+                <!-- Items -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_HealingPotion</thingDef>
+                    <count>3</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_MedicineHerbal</thingDef>
+                    <count>20</count>
+                </li>
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_Meal_Meat</thingDef>
+                    <count>20</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>AOSGitz_Grog</thingDef>
+                    <count>5</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>RawFungus</thingDef>
+                    <count>300</count>
+                </li>
+				<!-- Apparel -->
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_AOSGitz_MoonclanLoonShield</thingDef>
+                    <count>2</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_AOSGitz_LoonLordScepter</thingDef>
+                    <count>1</count>
+                </li>
+				<!-- Weapon -->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_AOSGitz_Knightspear</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_AOSGitz_Knighthammer</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_AOSGitz_Stabba</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_AOSGitz_LoonLordStaff</thingDef>
+                    <count>1</count>
+                </li>
+			    <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_AOSGitz_LoonStick</thingDef>
+                    <count>1</count>
+                </li>
+				<li Class="ScenPart_StartingAnimal">
+                  <def>StartingAnimal</def>
+                  <animalKind>AOSGitz_GnashaSquig</animalKind>
+                  <count>3</count>
+                  <bondToRandomPlayerPawnChance>0.5</bondToRandomPlayerPawnChance>
+                </li>
+				<li Class="ScenPart_NoPossessions">
+                   <def>NoPossessions</def>
+                </li>
+				<!-- Scattered -->
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>WoodLog</thingDef>
+                    <count>125</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Steel</thingDef>
+                    <count>75</count>
+                </li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>Steel</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>50</count>
+                </li>
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>On this rock you will build a mighty temple from which will rise a glorious, oh forget the theatrics its not like the Loonknights are listening anyway. This place is pretty barren and the nearby humans are annoying but otherwise it'll be somewhere good to hide until the Loonboss calms down, in the meantime making yourself a lair to scheme from sounds like a good plan.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+            </parts>
+        </scenario>
+    </ScenarioDef>
+	
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerColonyAOSGitzGrot</defName>
+    <label>Grot Settlers</label>
+    <description>A small Lurklair of Grots.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>AOSGitz_Grot_Colonist</basicMemberKind>
+    <pawnSingular>colonist</pawnSingular>
+    <pawnsPlural>colonists</pawnsPlural>
+	<xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <AOSGitz_Grot>10</AOSGitz_Grot>
+      </xenotypeChances>
+    </xenotypeSet>
+    <techLevel>Medieval</techLevel>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures><li>Astropolitan</li></allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+		  <li>GloomGitzSpore</li>
+		  <li>GloomGitzBasic</li>
+		  <li>GloomGitzBoss</li>
+		  <li>GloomGitzBigBoss</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+	
+  <PawnKindDef>
+    <defName>AOSGitz_Grot_Colonist</defName>
+    <label>Grot</label>
+	<defaultFactionType>PlayerColonyAOSGitzGrot</defaultFactionType>
+    <race>Human</race>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<nameMaker>NamerGloomGitzPerson</nameMaker>
+    <combatPower>30</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+            <li>GloomGitzSpore</li>
+            <li>GloomGitzBasic</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <minGenerationAge>21</minGenerationAge>
+    <maxGenerationAge>30</maxGenerationAge>
+    <initialWillRange>5~8</initialWillRange>
+    <initialResistanceRange>15~25</initialResistanceRange>
+	<isFighter>false</isFighter>
+	<disallowedTraits>
+    </disallowedTraits>
+	<apparelMoney>750~1000</apparelMoney>
+    <apparelTags>
+      <li>MoonClanBasic</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_AOSGitz_MoonGrotHood</li>
+	  <li>Apparel_AOSGitz_MoonRobe</li>
+    </apparelRequired>
+	<xenotypeSet>
+      <xenotypeChances>
+        <AOSGitz_Grot>1</AOSGitz_Grot>
+      </xenotypeChances>
+    </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>AOSGitz_GrotBoss_Colonist</defName>
+    <label>Boss</label>
+	<defaultFactionType>PlayerColonyAOSGitzGrot</defaultFactionType>
+    <race>Human</race>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<nameMaker>NamerGloomGitzPerson</nameMaker>
+    <combatPower>30</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+            <li>GloomGitzSpore</li>
+            <li>GloomGitzBoss</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <minGenerationAge>21</minGenerationAge>
+    <maxGenerationAge>30</maxGenerationAge>
+    <initialWillRange>5~8</initialWillRange>
+    <initialResistanceRange>15~25</initialResistanceRange>
+	<isFighter>false</isFighter>
+	<apparelMoney>750~1000</apparelMoney>
+    <apparelTags>
+      <li>MoonClanChief</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_AOSGitz_MoonBossHood</li>
+	  <li>Apparel_AOSGitz_MoonBossRobe</li>
+    </apparelRequired>
+	<xenotypeSet>
+      <xenotypeChances>
+        <AOSGitz_BossGrot>1</AOSGitz_BossGrot>
+      </xenotypeChances>
+    </xenotypeSet>
+	<useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>AOSGitz_GrotNagz</defName>
+    <label>Loonsquire</label>
+	<defaultFactionType>PlayerColonyAOSGitzGrot</defaultFactionType>
+    <race>Human</race>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<nameMaker>NamerGloomGitzPerson</nameMaker>
+    <combatPower>30</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+            <li>GloomGitzSpore</li>
+            <li>GloomGitzBasic</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <minGenerationAge>21</minGenerationAge>
+    <maxGenerationAge>30</maxGenerationAge>
+    <initialWillRange>14~20</initialWillRange>
+    <initialResistanceRange>20~30</initialResistanceRange>
+	<isFighter>false</isFighter>
+	<apparelMoney>1000~1500</apparelMoney>
+    <apparelTags>
+		<li>LoonCourtSquire</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_AOSGitz_LoonSquireHelm</li>
+	  <li>Apparel_AOSGitz_LoonSquire</li>
+    </apparelRequired>
+	<skills>
+	  <li>
+        <skill>Melee</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>1~2</range>
+      </li>
+    </skills>
+	<xenotypeSet>
+      <xenotypeChances>
+        <AOSGitz_Grot>1</AOSGitz_Grot>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>AOSGitz_GrotBurk</defName>
+    <label>Loonknight</label>
+	<defaultFactionType>PlayerColonyAOSGitzGrot</defaultFactionType>
+    <race>Human</race>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<nameMaker>NamerGloomGitzPerson</nameMaker>
+    <combatPower>30</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+            <li>GloomGitzSpore</li>
+            <li>GloomGitzBasic</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <minGenerationAge>21</minGenerationAge>
+    <maxGenerationAge>30</maxGenerationAge>
+    <initialWillRange>14~20</initialWillRange>
+    <initialResistanceRange>20~30</initialResistanceRange>
+	<isFighter>false</isFighter>
+	<apparelMoney>1000~1500</apparelMoney>
+    <apparelTags>
+		<li>LoonCourtKnight</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_AOSGitz_LoonKnightHelm</li>
+	  <li>Apparel_AOSGitz_LoonKnight</li>
+    </apparelRequired>
+	<skills>
+	  <li>
+        <skill>Melee</skill>
+        <range>3~4</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>1~2</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>1~2</range>
+      </li>
+    </skills>
+	<xenotypeSet>
+      <xenotypeChances>
+        <AOSGitz_Grot>1</AOSGitz_Grot>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>AOSGitz_GrotSnark</defName>
+    <label>Old Loonknight</label>
+	<defaultFactionType>PlayerColonyAOSGitzGrot</defaultFactionType>
+    <race>Human</race>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<nameMaker>NamerGloomGitzPerson</nameMaker>
+    <combatPower>30</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+            <li>GloomGitzSpore</li>
+            <li>GloomGitzBasic</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <minGenerationAge>21</minGenerationAge>
+    <maxGenerationAge>30</maxGenerationAge>
+    <initialWillRange>14~20</initialWillRange>
+    <initialResistanceRange>20~30</initialResistanceRange>
+	<isFighter>false</isFighter>
+	<apparelMoney>1000~1500</apparelMoney>
+    <apparelTags>
+		<li>LoonCourtKnightAlt</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_AOSGitz_LoonKnightMask</li>
+	  <li>Apparel_AOSGitz_LoonKnightAlt</li>
+    </apparelRequired>
+	<skills>
+	  <li>
+        <skill>Melee</skill>
+        <range>3~4</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>3~5</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>1~2</range>
+      </li>
+    </skills>
+	<xenotypeSet>
+      <xenotypeChances>
+        <AOSGitz_Grot>1</AOSGitz_Grot>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>AOSGitz_GrotGrib</defName>
+    <label>Heavy Loonknight</label>
+	<defaultFactionType>PlayerColonyAOSGitzGrot</defaultFactionType>
+    <race>Human</race>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<nameMaker>NamerGloomGitzPerson</nameMaker>
+    <combatPower>30</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+            <li>GloomGitzSpore</li>
+            <li>GloomGitzBoss</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <minGenerationAge>21</minGenerationAge>
+    <maxGenerationAge>30</maxGenerationAge>
+    <initialWillRange>14~20</initialWillRange>
+    <initialResistanceRange>20~30</initialResistanceRange>
+	<isFighter>false</isFighter>
+	<apparelMoney>1500~1750</apparelMoney>
+    <apparelTags>
+		<li>LoonCourtKnightHeavy</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_AOSGitz_LoonKnightHeavyHelm</li>
+	  <li>Apparel_AOSGitz_LoonKnightHeavy</li>
+    </apparelRequired>
+	<skills>
+	  <li>
+        <skill>Melee</skill>
+        <range>3~5</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>1~2</range>
+      </li>
+    </skills>
+	<xenotypeSet>
+      <xenotypeChances>
+        <AOSGitz_Grot>1</AOSGitz_Grot>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  
+  <PawnKindDef>
+    <defName>AOSGitz_GrotGrinrak</defName>
+    <label>Loonlord</label>
+	<defaultFactionType>PlayerColonyAOSGitzGrot</defaultFactionType>
+    <race>Human</race>
+	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<nameMaker>NamerGloomGitzPerson</nameMaker>
+    <combatPower>30</combatPower>
+	<backstoryFiltersOverride>
+      <li>
+        <categories>
+            <li>GloomGitzSpore</li>
+            <li>GloomGitzLoonLord</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <minGenerationAge>34</minGenerationAge>
+    <maxGenerationAge>40</maxGenerationAge>
+    <initialWillRange>14~20</initialWillRange>
+    <initialResistanceRange>20~30</initialResistanceRange>
+	<isFighter>false</isFighter>
+	<apparelMoney>1750~2000</apparelMoney>
+    <apparelTags>
+		<li>LoonCourtLord</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_AOSGitz_GrinrakMask</li>
+	  <li>Apparel_AOSGitz_Grinrakhood</li>
+	  <li>Apparel_AOSGitz_Grinrak</li>
+    </apparelRequired>
+	<skills>
+	  <li>
+        <skill>Melee</skill>
+        <range>3~5</range>
+      </li>
+	  <li>
+        <skill>Animals</skill>
+        <range>2~3</range>
+      </li>
+	  <li>
+        <skill>Social</skill>
+        <range>2~6</range>
+      </li>
+	  <li>
+        <skill>Intellectual</skill>
+        <range>5~6</range>
+      </li>
+    </skills>
+	<xenotypeSet>
+      <xenotypeChances>
+        <AOSGitz_LoonBossGrot>1</AOSGitz_LoonBossGrot>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+ 
+</Defs>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="GloomGitzBaseHumanMakeableRanged">
+    <defName>AOSGitz_Moonclan_Bow</defName>
+    <label>Moonclan Bow</label>
+    <description>Crude recurve bows crafted from heavily gnarled and knotted wood typically used by the Moonclan Grots, but often utilized by the Gloomspite Grots as well. While sturdier than they appear, the poor quality of wood causes them to be unwieldy and inaccurate.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponRanged/Bow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.05</drawSize>
+    </graphicData>
+    <soundInteract>Bow_Recurve</soundInteract>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <statBases>
+      <WorkToMake>6725</WorkToMake>
+      <Mass>1.8</Mass>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+    </statBases>
+	<equippedStatOffsets>
+	</equippedStatOffsets>
+    <weaponTags>
+      <li>MoonClanGitBow</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+      <displayPriority>101</displayPriority>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_MoonClanGit_Recurve</defaultProjectile>
+        <warmupTime>1.60</warmupTime>
+        <range>22.9</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_MoonClanGit_Recurve</defName>
+    <label>barbed arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ArrowHighVelocity</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <stoppingPower>1.25</stoppingPower>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

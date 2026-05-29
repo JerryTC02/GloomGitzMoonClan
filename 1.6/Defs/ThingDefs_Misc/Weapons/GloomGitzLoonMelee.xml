@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="GloomGitzBaseMeleeWeapon_Sharp_Quality">
+    <defName>MeleeWeapon_AOSGitz_Knightspear</defName>
+    <label>Loonknight Spear</label>
+    <techLevel>Medieval</techLevel>
+    <description>An oddly ornate spear wielded by Loonknights, its been made to resemble a lance despite often being used by knights who are on foot. While the general design isnt far from a typical Grot spear, the materials and quality still make it a better choice for any aspiring loon to wield.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Loons/LoonSpear</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.65</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <statBases>
+      <WorkToMake>14750</WorkToMake>
+      <Mass>2.8</Mass>
+    </statBases>
+	<equippedStatOffsets>
+		<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+	</equippedStatOffsets>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+	<costList>
+      <Steel>80</Steel>
+	  <WoodLog>30</WoodLog>
+    </costList>
+    <weaponTags>
+	 <li>GloomGitzLoonKnight</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2.4</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>26</power>
+        <armorPenetration>0.50</armorPenetration>
+        <cooldownTime>2.35</cooldownTime>
+      </li>
+	  <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>GloomGitz_Moonclan_Loonboon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+	  <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <displayPriority>6</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="GloomGitzBaseMeleeWeapon_Blunt_Quality">
+    <defName>MeleeWeapon_AOSGitz_Knighthammer</defName>
+    <label>Loonknight Wonky Lance</label>
+    <techLevel>Medieval</techLevel>
+    <description>Few Loonknights are capable of riding squigs, and even fewer survive such a task, for those that do, trying to aim a proper lance is nearly impossible with a Squigs erratic hopping. The "Wonky Lance" as it was called by Loonknight Grib, is a large wooden mallet made in the style of a lance and works with the movement of a squig to deliver crushing blows.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Loons/LoonHammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.25</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <statBases>
+      <WorkToMake>16750</WorkToMake>
+      <Mass>4.5</Mass>
+    </statBases>
+	<equippedStatOffsets>
+		<MoveSpeed>-0.05</MoveSpeed>
+		<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+	</equippedStatOffsets>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+	<costList>
+      <Steel>50</Steel>
+	  <WoodLog>200</WoodLog>
+    </costList>
+    <weaponTags>
+	 <li>GloomGitzLoonKnightHammer</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2.3</cooldownTime>
+      </li>
+	  <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>28</power>
+		<armorPenetration>0.15</armorPenetration>
+        <cooldownTime>2.8</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>GloomGitz_Moonclan_Loonboon</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+	  <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <displayPriority>8</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="GloomGitzBaseMeleeWeapon_Sharp_Quality">
+    <defName>MeleeWeapon_AOSGitz_LoonLordStaff</defName>
+    <label>Loonlord Halberd</label>
+    <techLevel>Medieval</techLevel>
+    <description>An impressive Staff for any mage, this Halberd is based on the staff wielded by Grinrak the Great, who founded the Order of the Loonknights. Being both a capable weapon and a potent casting implement, its only downside is that its fairly expensive by Grot standards.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Gitz/WeaponMelee/Loons/GrinkrakHalberd</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.40</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <statBases>
+      <WorkToMake>46250</WorkToMake>
+      <Mass>2.9</Mass>
+    </statBases>
+	<equippedStatOffsets>
+	    <PsychicSensitivityOffset>0.13</PsychicSensitivityOffset>
+        <PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.019</PsychicEntropyRecoveryRate>
+	</equippedStatOffsets>
+    <equippedAngleOffset>-0</equippedAngleOffset>
+	<costList>
+      <Steel>120</Steel>
+	  <WoodLog>25</WoodLog>
+    </costList>
+    <weaponTags>
+	 <li>GloomGitzLoonLord</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+	  <li>
+        <label>blades</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>29</power>
+        <cooldownTime>2.8</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>GloomGitz_Moonclan_VeryAdvanced</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+	  <recipeUsers Inherit="False">
+        <li>AOSgitz_Smithy</li>
+      </recipeUsers>
+      <displayPriority>10</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  
+</Defs>
