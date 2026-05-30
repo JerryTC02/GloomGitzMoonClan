@@ -30,7 +30,9 @@
 	    </li>
 	</modDependencies>
 	<loadAfter>
-		<li>brrainz.harmony</li>
+	    <li>brrainz.harmony</li>
+	    <li>Ludeon.RimWorld.Biotech</li>
+		<li>ShunTheWitch.CVNmechanoidwarfarecore</li>
 		<li>DankPyon.Medieval.Overhaul</li>
 	</loadAfter>
 	<description>Adds the Moonclanz and Looncourt to rimworld.</description>

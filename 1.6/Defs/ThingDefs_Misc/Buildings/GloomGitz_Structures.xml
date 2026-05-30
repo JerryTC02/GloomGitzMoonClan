@@ -2,9 +2,15 @@
 
 <Defs>
 
+  <DesignatorDropdownGroupDef>
+    <defName>AOSgitz_Structures</defName>
+    <label>Grot Structures</label>
+  </DesignatorDropdownGroupDef>
+
   <ThingDef ParentName="DoorBase">
     <defName>AOSGitz_LargeDoor</defName>
-    <label>Crude Gate</label>
+    <label>Crude Gate 2x1</label>
+	<designatorDropdown>AOSgitz_Structures</designatorDropdown>
     <description>Divides rooms. A crude wooden gate. This large, heavy gate requires adjacent walls to function.</description>
     <thingClass>Building_MultiTileDoor</thingClass>
     <statBases>
@@ -22,6 +28,63 @@
     <uiIconPath>Things/Building/Gitz/Gate/GloomspitzGate_MenuIcon</uiIconPath>
     <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
     <size>(2, 1)</size>
+    <rotatable>true</rotatable>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+	<stuffCategories Inherit="False" />
+	<useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <costList>
+	  <WoodLog>150</WoodLog>
+    </costList>
+    <building>
+      <blueprintClass>Blueprint_Build</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>(2.6, 3.1)</drawSize>
+      </blueprintGraphicData>
+      <isSupportDoor>true</isSupportDoor>
+      <doorTopGraphic>
+        <texPath>Things/Building/Gitz/Gate/GloomspitzGate_Top</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3.1, 2.3)</drawSize>
+      </doorTopGraphic>
+      <doorSupportGraphic>
+        <texPath>Things/Building/Gitz/Gate/GloomspitzGate_Support</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(3.1, 2.3)</drawSize>
+      </doorSupportGraphic>
+    </building>
+    <researchPrerequisites>
+      <li>GloomGitz_Basic</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_MultiCellDoor</li>
+    </placeWorkers>
+  </ThingDef>
+  
+  <ThingDef ParentName="DoorBase">
+    <defName>AOSGitz_LargeDoorAlt</defName>
+    <label>Crude Gate 3x1</label>
+	<designatorDropdown>AOSgitz_Structures</designatorDropdown>
+    <description>Divides rooms. A crude wooden gate. This large, heavy gate requires adjacent walls to function.</description>
+    <thingClass>Building_MultiTileDoor</thingClass>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>350</MaxHitPoints>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Building/Gitz/Gate/GloomspitzGate_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Gitz/Gate/GloomspitzGate_MenuIcon</uiIconPath>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <size>(3, 1)</size>
     <rotatable>true</rotatable>
     <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
 	<stuffCategories Inherit="False" />

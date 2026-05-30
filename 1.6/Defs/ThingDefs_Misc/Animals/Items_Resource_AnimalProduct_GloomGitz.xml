@@ -118,4 +118,29 @@
     </comps>
   </ThingDef>
   
+  <ThingDef ParentName="LeatherBase">
+    <defName>AOSGitz_Leather_Squig</defName>
+    <label>squig leather</label>
+    <description>Thick and tough leather taken from a Squig, almost all Greenskin goods are made from this leather.</description>
+    <hiddenWhileUndiscovered>false</hiddenWhileUndiscovered>
+    <genericMarketSellable>true</genericMarketSellable>
+    <graphicData>
+      <color>(150,19,35)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>3.5</MarketValue>
+      <StuffPower_Armor_Sharp>1.05</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.30</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.5</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>12</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>20</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(150,19,35)</color>
+      <statFactors>
+        <Beauty>-1</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
 </Defs>
