@@ -34,6 +34,7 @@
 	    <li>Ludeon.RimWorld.Biotech</li>
 		<li>ShunTheWitch.CVNmechanoidwarfarecore</li>
 		<li>DankPyon.Medieval.Overhaul</li>
+		<li>VanillaExpanded.VFEPropsandDecor</li>
 	</loadAfter>
 	<description>Adds the Moonclanz and Looncourt to rimworld.</description>
 </ModMetaData>

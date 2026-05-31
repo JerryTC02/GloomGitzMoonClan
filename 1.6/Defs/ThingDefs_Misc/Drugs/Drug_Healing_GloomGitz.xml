@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 
   <ThingDef ParentName="MakeableDrugBase">
@@ -9,6 +10,10 @@
       <HediffDef>AOSGitz_HealingPotionHigh</HediffDef>
       <HediffDef>AOSGitz_HealingPotionHighTrue</HediffDef>
     </descriptionHyperlinks>
+	<orderedTakeGroup>Medicine</orderedTakeGroup>
+	<thingCategories>
+      <li>Medicine</li>
+    </thingCategories>
     <graphicData>
       <texPath>Things/Item/Resource/Gitz/HealingPotion</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -18,7 +23,10 @@
     <statBases>
       <WorkToMake>625</WorkToMake>
       <MarketValue>42</MarketValue>
-      <Mass>0.12</Mass>
+      <Mass>0.25</Mass>
+      <Flammability>0.1</Flammability>
+	  <MedicalPotency>0.75</MedicalPotency>
+      <MedicalQualityMax>0.90</MedicalQualityMax>
     </statBases>
     <techLevel>Medieval</techLevel>
     <ingestible>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <XenotypeIconDef>
+    <defName>GloomGitz_Basic</defName>
+    <texPath>UI/Icons/Xenotypes/Xenotype_Grot</texPath>
+  </XenotypeIconDef>
+
+  <XenotypeIconDef>
+    <defName>GloomGitz_Boss</defName>
+    <texPath>UI/Icons/Xenotypes/Xenotype_GrotChief</texPath>
+  </XenotypeIconDef>
+
+  <XenotypeIconDef>
+    <defName>GloomGitz_LoonBoss</defName>
+    <texPath>UI/Icons/Xenotypes/Xenotype_LoonBoss</texPath>
+  </XenotypeIconDef>
+
+</Defs>

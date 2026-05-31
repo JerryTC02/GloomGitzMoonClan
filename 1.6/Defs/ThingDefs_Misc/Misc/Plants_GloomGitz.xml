@@ -135,7 +135,7 @@
   <ThingDef ParentName="MedicineBase">
     <defName>AOSGitz_MedicineHerbal</defName>
     <label>Healing Shrooms</label>
-    <description>A crude bundle of various medicinal mushrooms harvested in the dank grottos of the Moonclans, they would be surprisingly effective were it not for the lack of skill most Shamans possess with measuring the right dosage.</description>
+    <description>A crude bundle of various medicinal mushrooms harvested in the dank grottos of the Moonclans, they would be surprisingly effective were it not for the lack of skill most Shamans possess when measuring the right dosage.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Gitz/Shroommedicine</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
