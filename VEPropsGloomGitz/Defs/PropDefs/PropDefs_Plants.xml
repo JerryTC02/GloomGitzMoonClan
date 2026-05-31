@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<VFEProps.PropDef>
+		<defName>VFE_GloomGitz_Prop_Plants_1</defName>
+		<category>VFE_PropCategory_Plants</category>		
+		<priority>1001</priority>
+		<prop>VFEPD_GloomGitz_Dyeshroom</prop>
+	</VFEProps.PropDef>
+	
+	<VFEProps.PropDef>
+		<defName>VFE_GloomGitz_Prop_Plants_2</defName>
+		<category>VFE_PropCategory_Plants</category>		
+		<priority>1002</priority>
+		<prop>VFEPD_GloomGitz_Clothshroom</prop>
+	</VFEProps.PropDef>
+	
+	<VFEProps.PropDef>
+		<defName>VFE_GloomGitz_Prop_Plants_3</defName>
+		<category>VFE_PropCategory_Plants</category>		
+		<priority>1003</priority>
+		<prop>VFEPD_GloomGitz_Healshroom</prop>
+	</VFEProps.PropDef>
+	
+	<VFEProps.PropDef>
+		<defName>VFE_GloomGitz_Prop_Plants_4</defName>
+		<category>VFE_PropCategory_Plants</category>		
+		<priority>1004</priority>
+		<prop>VFEPD_GloomGitz_Deffcap</prop>
+	</VFEProps.PropDef>
+	
+	<VFEProps.PropDef>
+		<defName>VFE_GloomGitz_Prop_Plants_5</defName>
+		<category>VFE_PropCategory_Plants</category>		
+		<priority>1005</priority>
+		<prop>VFEPD_GloomGitz_Madcap</prop>
+	</VFEProps.PropDef>
+	
+	<VFEProps.PropDef>
+		<defName>VFE_GloomGitz_Prop_Plants_6</defName>
+		<category>VFE_PropCategory_Plants</category>		
+		<priority>1005</priority>
+		<prop>VFEPD_GloomGitz_Looncap</prop>
+	</VFEProps.PropDef>
+	
+</Defs>

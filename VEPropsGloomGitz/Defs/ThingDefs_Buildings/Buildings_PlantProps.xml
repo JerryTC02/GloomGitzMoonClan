@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<ThingDef ParentName="VFEPD_NonColourableFurnitureBase">
+		<defName>VFEPD_GloomGitz_Dyeshroom</defName>
+		<label>Specklecap</label>
+		<thingClass>VFEProps.Building_FakePlant3x3</thingClass>
+		<description>Multicolored fungi of various species commonly known as "Specklecap", usually grown in large colorful piles to provide the Moonclans with the various paints they use to represent Da Bad Moon and Glareface Frazzlegit. This one however is fake.</description>
+		<graphicData>
+			<texPath>Things/Plant/Gitz/Dyeshroom/Dyeshroom</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(0.65,0.65)</drawSize>
+			<shadowData>
+				<volume>(0, 0, 0)</volume>
+			</shadowData>
+			<drawOffset>(0,0,0.2)</drawOffset>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>Standable</passability>
+		<fillPercent>0.1</fillPercent>
+		<pathCost>5</pathCost>
+		<filthLeaving Inherit="False"/>
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<WorkToBuild>0</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<isEdifice>false</isEdifice>
+			<isInert>true</isInert>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+	</ThingDef>
+	
+	<ThingDef ParentName="VFEPD_NonColourableFurnitureBase">
+		<defName>VFEPD_GloomGitz_Clothshroom</defName>
+		<label>Softstool</label>
+		<description>Dainty mushrooms with soft mycelium strands that hang from their cap, these strands are remarkably similar to cloth and Grots spin them into a material mostly indentical to traditional cotton cloth. This one however is fake.</description>
+		<thingClass>VFEProps.Building_FakePlant2x2</thingClass>
+    	<graphicData>
+			<texPath>Things/Plant/Gitz/Clothshroom/Clothshroom</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(0.60,0.60)</drawSize>
+			<shadowData>
+				<volume>(0.2, 0.3, 0.13)</volume>
+				<offset>(-0.03,0,-0.44)</offset>
+			</shadowData>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>130</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<filthLeaving Inherit="False"/>
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<WorkToBuild>0</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+	</ThingDef>
+	
+	<ThingDef ParentName="VFEPD_NonColourableFurnitureBase">
+		<defName>VFEPD_GloomGitz_Healshroom</defName>
+		<label>Gitfixer Fungus</label>
+		<description>Small green mushrooms that are held in high regard by every Grot that ever stubbed his toe or got stabbed by his fellow Git for their ability to dull pain and "fix them up right" quickly. This one however is fake.</description>
+		<thingClass>VFEProps.Building_FakePlant3x3</thingClass>
+		<graphicData>
+			<texPath>Things/Plant/Gitz/Healshroom/Healshroom</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(0.45,0.45)</drawSize>
+			<shadowData>
+				<volume>(0, 0, 0)</volume>
+			</shadowData>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>Standable</passability>
+		<fillPercent>0.1</fillPercent>
+		<pathCost>5</pathCost>
+		<filthLeaving Inherit="False"/>
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<WorkToBuild>0</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3</glowRadius>
+				<glowColor>(5,5,25,0)</glowColor>
+			</li>
+		</comps>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+	</ThingDef>
+	
+	<ThingDef ParentName="VFEPD_NonColourableFurnitureBase">
+		<defName>VFEPD_GloomGitz_Deffcap</defName>
+		<label>Deffcap</label>
+		<description>Smells like death, and some who eat it wish they died, Deffcaps are a hallucinogenic fungus cultivated and used by many Grot clans. This one however is fake.</description>
+		<thingClass>VFEProps.Building_FakePlant2x2</thingClass>
+	    <graphicData>
+			<texPath>Things/Plant/Gitz/Deffcap/Deffcap</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(0.75,0.75)</drawSize>
+			<shadowData>
+				<volume>(0.2, 0.3, 0.13)</volume>
+				<offset>(-0.03,0,-0.44)</offset>
+			</shadowData>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>130</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<filthLeaving Inherit="False"/>
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<WorkToBuild>0</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+	</ThingDef>
+	
+	<ThingDef ParentName="VFEPD_NonColourableFurnitureBase">
+		<defName>VFEPD_GloomGitz_Madcap</defName>
+		<label>Madcap Mushrooms</label>
+		<description>One of the most common drugs seen among Grots, Madcaps are especially popular for their ability to remove a Grots natural instinct to flee and allowing them to seemingly dance through enemy lines like even the most graceful of Aelves. In reality it makes them unpredictable, insane, and the "graceful dance" looks more like being blackout drunk mixed with a spinning top. This one however is fake.</description>
+		<thingClass>VFEProps.Building_FakePlant3x3</thingClass>
+	    <graphicData>
+			<texPath>Things/Plant/Gitz/MadCap/MadCap</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(0.65,0.65)</drawSize>
+			<shadowData>
+				<volume>(0.2, 0.3, 0.13)</volume>
+				<offset>(-0.03,0,-0.44)</offset>
+			</shadowData>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>130</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<filthLeaving Inherit="False"/>
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<WorkToBuild>0</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+	</ThingDef>
+	
+	<ThingDef ParentName="VFEPD_NonColourableFurnitureBase">
+		<defName>VFEPD_GloomGitz_Looncap</defName>
+		<label>Looncap</label>
+		<description>Powerful fungi of varying sizes found only in places touched by Da Bad Moons light, they are highly coveted by the Gloomspite Gitz for all manner of rituals and potions. This one however is fake.</description>
+		<graphicData>
+			<texPath>Things/Plant/Gitz/Looncap/Looncap</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.10,1.10)</drawSize>
+			<shadowData>
+				<volume>(0.2, 0.3, 0.13)</volume>
+				<offset>(-0.03,0,-0.44)</offset>
+			</shadowData>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>130</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<filthLeaving Inherit="False"/>
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<WorkToBuild>0</WorkToBuild>
+			<Mass>5</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+		<clearBuildingArea>false</clearBuildingArea>
+	</ThingDef>
+
+</Defs>
